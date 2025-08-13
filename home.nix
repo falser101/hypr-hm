@@ -18,8 +18,15 @@
     waybar
     dunst
     cliphist
-    hyprpaper
+    wl-clipboard
     wlogout
+    hyprpaper
+    hypridle
+    hyprlock
+    hyprpicker
+    hyprsunset
+    rofi-wayland
+    kitty
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

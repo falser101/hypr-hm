@@ -21,23 +21,39 @@
     wl-clipboard
     wlogout
     hyprpaper
+    hyprpolkitagent
     hypridle
     hyprlock
     hyprpicker
     hyprsunset
     rofi-wayland
-    kitty
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
+    ".config/fish/config.fish" = {
+      source = .config/fish/config.fish;
+    };
+
+    ".config/fish/user.fish" = {
+      source = .config/fish/user.fish;
+    };
+
     ".config/hypr" = {
       source = .config/hypr;
     };
 
+    ".config/kitty" = {
+      source = .config/kitty;
+    };
+
     ".local/bin/change-wallpaper" = {
-      source = ./change-wallpaper.sh;  # 脚本相对于home.nix的路径
+      source = .local/bin/change-wallpaper.sh;  # 脚本相对于home.nix的路径
+      executable = true;               # 设为可执行文件
+    };
+    ".local/bin/dontkillsteam.sh" = {
+      source = .local/bin/dontkillsteam.sh;  # 脚本相对于home.nix的路径
       executable = true;               # 设为可执行文件
     };
   };

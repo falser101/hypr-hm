@@ -31,36 +31,32 @@
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
-  home.file = {
-    ".config/fish/config.fish" = {
-      source = .config/fish/config.fish;
-    };
+  # home.file = {
 
-    ".config/fish/user.fish" = {
-      source = .config/fish/user.fish;
-    };
+  #   ".local/bin/change-wallpaper" = {
+  #     source = .local/bin/change-wallpaper.sh;  # 脚本相对于home.nix的路径
+  #     executable = true;               # 设为可执行文件
+  #   };
 
-    ".config/hypr" = {
-      source = .config/hypr;
-    };
+  #   ".local/bin/dontkillsteam.sh" = {
+  #     source = .local/bin/dontkillsteam.sh;  # 脚本相对于home.nix的路径
+  #     executable = true;               # 设为可执行文件
+  #   };
 
-    ".config/kitty" = {
-      source = .config/kitty;
-    };
+  #   ".local/bin/xdph.sh" = {
+  #     source = .local/bin/xdph.sh;  # 脚本相对于home.nix的路径
+  #     executable = true;               # 设为可执行文件
+  #   };
+  # };
 
-    ".config/user-dirs.dirs" = {
-      source = .config/user-dirs.dirs;
-    };
-
-    ".local/bin/change-wallpaper" = {
-      source = .local/bin/change-wallpaper.sh;  # 脚本相对于home.nix的路径
-      executable = true;               # 设为可执行文件
-    };
-    ".local/bin/dontkillsteam.sh" = {
-      source = .local/bin/dontkillsteam.sh;  # 脚本相对于home.nix的路径
-      executable = true;               # 设为可执行文件
-    };
-  };
+  # xdg.configFile = {
+  #   "fish/config.fish".source = .config/fish/config.fish;
+  #   "fish/user.fish".source = .config/fish/user.fish;
+  #   "hypr".source = .config/hypr;
+  #   "kitty".source = .config/kitty;
+  #   "waybar".source = .config/waybar;
+  #   "user-dirs.dirs".source = .config/user-dirs.dirs;
+  # };
 
 
   home.sessionVariables = {

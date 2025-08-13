@@ -1,0 +1,141 @@
+* {
+    border: none;
+    border-radius: 4px;
+    font-family: "JetBrains Mono", "Font Awesome 6 Free", sans-serif;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(30, 30, 46, 0.9);
+    color: #cdd6f4;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+/* 模块通用样式 */
+#workspaces {
+    font-size: 12px;
+    padding: 0 8px;
+    margin: 4px 2px;
+    background-color: rgba(49, 50, 68, 0.7);
+}
+#cpu,
+#memory,
+#network,
+#taskbar,
+#pulseaudio,
+#battery,
+#clock,
+#keyboard-state,
+#tray {
+    padding: 0 8px;
+    margin: 4px 2px;
+    background-color: rgba(49, 50, 68, 0.7);
+}
+
+/* 工作区样式 */
+#workspaces button {
+    padding: 0 5px;
+    color: #a6adc8;
+    background-color: transparent;
+}
+
+#workspaces button.active {
+    color: #89b4fa;
+    background-color: rgba(69, 71, 90, 0.8);
+}
+
+#workspaces button.urgent {
+    color: #f38ba8;
+}
+
+/* 资源监控样式 */
+#cpu {
+    color: #a6e3a1;
+}
+
+#memory {
+    color: #f9e2af;
+}
+
+#network {
+    color: #89b4fa;
+}
+
+/* 任务栏样式 */
+#taskbar {
+    padding: 0 4px;
+}
+
+#taskbar item {
+    padding: 0 3px;
+}
+
+/* 鼠标悬停在任务栏项目上时 */
+#taskbar item:hover {
+    box-shadow: 0 0 8px rgba(137, 180, 250, 0.6); /* 蓝色阴影效果 */
+    background-color: rgba(69, 71, 90, 0.9);
+}
+
+/* 活动窗口的任务栏项目 */
+#taskbar item.active {
+    background-color: rgba(69, 71, 90, 0.8);
+    box-shadow: 0 0 5px rgba(137, 180, 250, 0.4); /* 活动状态基础阴影 */
+}
+
+/* 键盘状态样式 */
+#keyboard-state {
+    padding: 0 10px;
+}
+
+#keyboard-state .numlock.locked,
+#keyboard-state .capslock.locked {
+    color: #ff5555; /* 锁定状态时的文本颜色 */
+    font-weight: bold;
+}
+
+#keyboard-state .scrolllock {
+    color: #8be9fd; /* ScrollLock 默认颜色 */
+}
+
+/* 右侧模块样式 */
+#pulseaudio {
+    color: #cba6f7;
+}
+
+#battery {
+    color: #a6e3a1;
+}
+
+#battery.warning {
+    color: #f9e2af;
+}
+
+#battery.critical {
+    color: #f38ba8;
+    animation: blink 1s linear infinite alternate;
+}
+
+#clock {
+    color: #89dceb;
+    padding: 0 10px;
+}
+
+#tray {
+    padding: 0 6px;
+}
+
+/* 动画效果 */
+@keyframes blink {
+    to {
+        background-color: rgba(243, 139, 168, 0.3);
+    }
+}
+
+/* 悬停效果 */
+.modules-left > widget:hover,
+.modules-center > widget:hover,
+.modules-right > widget:hover {
+    background-color: rgba(69, 71, 90, 0.9);
+}

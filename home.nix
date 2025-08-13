@@ -48,6 +48,10 @@
       source = .config/kitty;
     };
 
+    ".config/user-dirs.dirs" = {
+      source = .config/user-dirs.dirs;
+    };
+
     ".local/bin/change-wallpaper" = {
       source = .local/bin/change-wallpaper.sh;  # 脚本相对于home.nix的路径
       executable = true;               # 设为可执行文件

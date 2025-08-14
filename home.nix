@@ -15,48 +15,55 @@
   home.packages = with pkgs; [
     # 字体
     jetbrains-mono
-    waybar
-    dunst
-    cliphist
-    wl-clipboard
-    wlogout
+
+    # hyprland
     hyprpaper
     hyprpolkitagent
     hypridle
     hyprlock
     hyprpicker
     hyprsunset
+
+    # Window Manager
+    wlogout
+    waybar
+    dunst
     rofi-wayland
+    satty
+    grim
+    slurp
+    cliphist
+    wl-clip-persist
+
+    # shell
+    fastfetch
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
-  # home.file = {
+  home.file = {
+    ".config/fastfetch".source = .config/fastfetch;
+    ".config/hypr".source = .config/hypr;
+    ".config/kitty".source = .config/kitty;
+    ".config/rofi".source = .config/rofi;
+    ".config/satty".source = .config/satty;
+    ".config/waybar".source = .config/waybar;
 
-  #   ".local/bin/change-wallpaper" = {
-  #     source = .local/bin/change-wallpaper.sh;  # 脚本相对于home.nix的路径
-  #     executable = true;               # 设为可执行文件
-  #   };
+    ".local/bin/change-wallpaper" = {
+      source = .local/bin/change-wallpaper.sh;  # 脚本相对于home.nix的路径
+      executable = true;               # 设为可执行文件
+    };
 
-  #   ".local/bin/dontkillsteam.sh" = {
-  #     source = .local/bin/dontkillsteam.sh;  # 脚本相对于home.nix的路径
-  #     executable = true;               # 设为可执行文件
-  #   };
+    ".local/bin/dontkillsteam.sh" = {
+      source = .local/bin/dontkillsteam.sh;  # 脚本相对于home.nix的路径
+      executable = true;               # 设为可执行文件
+    };
 
-  #   ".local/bin/xdph.sh" = {
-  #     source = .local/bin/xdph.sh;  # 脚本相对于home.nix的路径
-  #     executable = true;               # 设为可执行文件
-  #   };
-  # };
-
-  # xdg.configFile = {
-  #   "fish/config.fish".source = .config/fish/config.fish;
-  #   "fish/user.fish".source = .config/fish/user.fish;
-  #   "hypr".source = .config/hypr;
-  #   "kitty".source = .config/kitty;
-  #   "waybar".source = .config/waybar;
-  #   "user-dirs.dirs".source = .config/user-dirs.dirs;
-  # };
+    ".local/bin/xdph.sh" = {
+      source = .local/bin/xdph.sh;  # 脚本相对于home.nix的路径
+      executable = true;               # 设为可执行文件
+    };
+  };
 
 
   home.sessionVariables = {

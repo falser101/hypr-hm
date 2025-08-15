@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+      ./modules/config
+      ./modules/local
+  ];
   nixpkgs.config = {
     allowUnfree = true;
   };
@@ -8,10 +12,8 @@
   home.username = "falser";
   home.homeDirectory = "/home/falser";
 
-  home.stateVersion = "25.05"; # Please read the comment before changing.
+  home.stateVersion = "25.05";
 
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
   home.packages = with pkgs; [
     # 字体
     jetbrains-mono
@@ -37,39 +39,12 @@
 
     # shell
     fastfetch
+    imagemagick
   ];
-
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
-  home.file = {
-    ".config/fastfetch".source = .config/fastfetch;
-    ".config/hypr".source = .config/hypr;
-    ".config/kitty".source = .config/kitty;
-    ".config/rofi".source = .config/rofi;
-    ".config/satty".source = .config/satty;
-    ".config/waybar".source = .config/waybar;
-
-    ".local/bin/change-wallpaper" = {
-      source = .local/bin/change-wallpaper.sh;  # 脚本相对于home.nix的路径
-      executable = true;               # 设为可执行文件
-    };
-
-    ".local/bin/dontkillsteam.sh" = {
-      source = .local/bin/dontkillsteam.sh;  # 脚本相对于home.nix的路径
-      executable = true;               # 设为可执行文件
-    };
-
-    ".local/bin/xdph.sh" = {
-      source = .local/bin/xdph.sh;  # 脚本相对于home.nix的路径
-      executable = true;               # 设为可执行文件
-    };
-  };
-
 
   home.sessionVariables = {
       PATH = "$HOME/.local/bin:$PATH";
   };
 
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

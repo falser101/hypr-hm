@@ -13,5 +13,6 @@
     ./programs.nix
     ./windowrules.nix
     ./hyprpaper.nix
+    ./hyprlock.nix
   ];
 }

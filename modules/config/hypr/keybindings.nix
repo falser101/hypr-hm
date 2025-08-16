@@ -8,6 +8,9 @@
 
     $mainMod = SUPER # 主修饰键（Windows键）
 
+    # 锁屏
+    bindd = $mainMod, L, Lock Screen, exec, hyprlock
+
     # 截图
     bind = $mainMod, P, exec, pkill slurp || grim -g "$(slurp)" - | swappy -f -
 

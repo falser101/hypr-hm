@@ -22,7 +22,6 @@
     hyprpaper
     hyprpolkitagent
     hypridle
-    hyprlock
     hyprpicker
     hyprsunset
 

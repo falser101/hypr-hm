@@ -31,7 +31,7 @@
     waybar
     dunst
     wofi
-    satty
+    swappy
     grim
     slurp
     cliphist

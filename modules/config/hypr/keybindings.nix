@@ -7,6 +7,10 @@
     ###################
 
     $mainMod = SUPER # 主修饰键（Windows键）
+
+    # 截图
+    bind = $mainMod, P, exec, pkill slurp || grim -g "$(slurp)" - | swappy -f -
+
     # 切換壁紙
     bind = $mainMod SHIFT, W, exec, hyprpaper.sh
 

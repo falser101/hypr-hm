@@ -5,5 +5,6 @@
     ./hypr
     ./waybar
     ./wofi
+    ./swappy
   ];
 }

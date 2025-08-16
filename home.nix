@@ -30,7 +30,7 @@
     wlogout
     waybar
     dunst
-    rofi-wayland
+    wofi
     satty
     grim
     slurp
@@ -40,6 +40,8 @@
     # shell
     fastfetch
     imagemagick
+
+    noto-fonts-emoji
   ];
 
   home.sessionVariables = {

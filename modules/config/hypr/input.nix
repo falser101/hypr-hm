@@ -1,0 +1,34 @@
+{ ... }:
+
+{
+  xdg.configFile."hypr/input.conf".text = ''
+    #############
+    ### INPUT ###
+    #############
+
+    # 键盘与鼠标通用设置
+    input {
+        kb_layout = us
+        kb_variant =
+        kb_model =
+        kb_options =
+        kb_rules =
+        follow_mouse = 1
+        sensitivity = 0
+        touchpad {
+            natural_scroll = false
+        }
+    }
+
+    # 手势配置
+    gestures {
+        workspace_swipe = false
+    }
+
+    # 设备特定配置（示例）
+    device {
+        name = epic-mouse-v1
+        sensitivity = -0.5
+    }
+  '';
+}

@@ -12,5 +12,6 @@
     ./permissions.nix
     ./programs.nix
     ./windowrules.nix
+    ./hyprpaper.nix
   ];
 }

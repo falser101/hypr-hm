@@ -2,6 +2,7 @@
 
 {
   xdg.configFile."waybar/style.css".text = ''
+    @import "theme.css";
     * {
         /* `otf-font-awesome` is required to be installed for icons */
         font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -58,13 +59,35 @@
     }
 
     #workspaces button {
-        padding: 0 5px;
-        background-color: transparent;
-        color: #ffffff;
+        box-shadow: none;
+        text-shadow: none;
+        padding: 0em;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+        margin-left: 0em;
+        padding-left: 0.3em;
+        padding-right: 0.3em;
+        margin-right: 0em;
+        color: @main-fg;
+        animation: ws_normal 20s ease-in-out 1;
+    }
+
+    #workspaces button.active {
+        background: @wb-act-bg;
+        color: @wb-act-fg;
+        margin-left: 0.3em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        margin-right: 0.3em;
+        animation: ws_active 20s ease-in-out 1;
+        transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
     }
 
     #workspaces button:hover {
-        background: rgba(0, 0, 0, 0.2);
+        background: @wb-hvr-bg;
+        color: @wb-hvr-fg;
+        animation: ws_hover 20s ease-in-out 1;
+        transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
     }
 
     #workspaces button.focused {

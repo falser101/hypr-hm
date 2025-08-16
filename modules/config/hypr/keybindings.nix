@@ -8,14 +8,17 @@
 
     $mainMod = SUPER # 主修饰键（Windows键）
 
+    # waybar
+    bindd = Alt_L, Control_L, Toggle waybar, exec, pkill waybar || waybar
+
     # 锁屏
     bindd = $mainMod, L, Lock Screen, exec, hyprlock
 
     # 截图
-    bind = $mainMod, P, exec, pkill slurp || grim -g "$(slurp)" - | swappy -f -
+    bindd = $mainMod, P, Screen shot, exec, pkill slurp || grim -g "$(slurp)" - | swappy -f -
 
     # 切換壁紙
-    bind = $mainMod SHIFT, W, exec, hyprpaper.sh
+    bindd = $mainMod SHIFT, W, Change wallpaper, exec, hyprpaper.sh
 
     # 粘貼板
     bind = $mainMod, V, exec, pkill wofi || cliphist list | wofi --style ~/.config/wofi/style.css --dmenu | cliphist decode | wl-copy

@@ -2,8 +2,7 @@
 
 {
   imports = [
-    ./config.nix
     ./style.nix
-    ./theme.nix
+    ./layout.nix
   ];
 }

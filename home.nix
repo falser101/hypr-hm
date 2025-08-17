@@ -68,6 +68,7 @@ in
     "clash-verge-rev-bin"
     "jetbrains-toolbox"
     "onlyoffice-bin"
+    "dolphin"
 
     "linyaps"
     "vim"

@@ -8,8 +8,11 @@
 
     $mainMod = SUPER # 主修饰键（Windows键）
 
+    # wlogout
+    bindd = Control_L Alt_L, Delete, Toggle wlogout, exec, pkill wlogout || wlogout
+
     # waybar
-    bindd = Alt_L, Control_L, Toggle waybar, exec, pkill waybar || waybar
+    bindd = Control_L, Alt_L, Toggle waybar, exec, pkill waybar || waybar
 
     # 锁屏
     bindd = $mainMod, L, Lock Screen, exec, hyprlock

@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./animations
     ./hyprland.nix
     ./autostart.nix
     ./env.nix

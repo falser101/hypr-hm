@@ -6,7 +6,7 @@
     {
         // "layer": "top", // Waybar at top layer
         // "position": "bottom", // Waybar position (top|bottom|left|right)
-        "height": 30, // Waybar height (to be removed for auto height)
+        "height": 28, // Waybar height (to be removed for auto height)
         // "width": 1280, // Waybar width
         "spacing": 4, // Gaps between modules (4px)
         // Choose the order of the modules
@@ -41,6 +41,34 @@
             "all-outputs": true,
             "on-scroll-up": "hyprctl dispatch workspace e+1",
             "on-scroll-down": "hyprctl dispatch workspace e-1"
+        },
+        "wlr/taskbar": {
+            "all-outputs": true,
+            "active-first": false,
+            "markup": true,
+            "format": "{icon}",
+            "rotate": 0,
+            "spacing": 15,
+            "tooltip-format": "{title} | {app_id}",
+            "on-click": "activate",
+            "on-click-right": "fullscreen",
+            "on-click-middle": "close",
+            "class": "no-margin-padding",
+            "ignore-list": [
+                ""
+            ],
+            "app_ids-mapping": {
+                "firefoxdeveloperedition": "firefox-developer-edition",
+                "firefoxnightly": "firefox-nightly",
+                "Spotify Free": "Spotify"
+            },
+            "rewrite": {
+                "Firefox Web Browser": "Firefox",
+                "Foot Server": "Terminal",
+                "Spotify Free": "Spotify",
+                "org.kde.dolphin": "Dolphin",
+                "libreoffice-writer": "Writer"
+            }
         },
         "keyboard-state": {
             "numlock": true,
@@ -86,11 +114,8 @@
         },
         "tray": {
             // "icon-size": 21,
-            "spacing": 10,
-            // "icons": {
-            //   "blueman": "bluetooth",
-            //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-            // }
+            "spacing": 5,
+            "icon-size-multiplier": 1.6
         },
         "clock": {
             // "timezone": "America/New_York",
@@ -187,16 +212,9 @@
             // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
         },
         "custom/power": {
-            "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
+          "format" : "⏻ ",
+      		"tooltip": false,
+      		"on-click": "wlogout"
         }
     }
   '';

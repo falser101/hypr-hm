@@ -6,6 +6,7 @@
     ./kitty
     ./waybar
     ./wofi
+    ./wlogout
     ./swappy
   ];
 }

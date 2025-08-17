@@ -57,6 +57,8 @@ in
   aur.packages = [
     "hyprland"
     "hyprlock"
+    "bluez"
+    "blueman"
 
     "com.qq.weixin.work.deepin"
     "zed"
@@ -79,6 +81,8 @@ in
     "jdk21-openjdk"
     "jdk8-openjdk"
     "htop"
+    # firefox 语音合成
+    "speech-dispatcher"
 
     "fcitx5"
     "fcitx5-rime"

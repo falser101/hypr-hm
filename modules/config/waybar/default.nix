@@ -1,4 +1,4 @@
-{...}:
+{ ... }:
 
 {
   imports = [
@@ -6,4 +6,7 @@
     ./style.nix
     ./theme.nix
   ];
+
+  xdg.configFile."waybar/modules".source = ./modules;
+
 }

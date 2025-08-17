@@ -11,7 +11,7 @@
 
     window#waybar {
         background-color: rgba(43, 48, 59, 0.5);
-        border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+        /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
         color: #ffffff;
         transition-property: background-color;
         transition-duration: .5s;
@@ -512,5 +512,74 @@
     #privacy-item.audio-out {
         background-color: #0069d4;
     }
+
+    #bluetooth {
+        padding: 0 10px;
+        color: #ffffff;
+        background-color: #5c5c8a; /* 基础紫色调，与其他模块区分 */
+    }
+
+    #bluetooth.off {
+        background-color: #5c5c8a;
+        color: #b3b3cc;
+    }
+
+    /* 蓝牙开启但未连接状态 */
+    #bluetooth.on {
+        background-color: #5c5c8a;
+    }
+
+    /* 蓝牙已连接状态 */
+    #bluetooth.connected {
+        background-color: #4a90e2;
+    }
+
+    /* 蓝牙无控制器状态 */
+    #bluetooth.no-controller {
+        background-color: #999999;
+        color: #666666;
+    }
+
+    /* 蓝牙禁用状态（硬件开关关闭） */
+    #bluetooth.disabled {
+        background-color: #7f8c8d;
+        color: #bdc3c7;
+    }
+
+    /* 可发现状态 */
+    #bluetooth.discoverable {
+        background-color: #f39c12;
+    }
+
+    /* 正在搜索状态 */
+    #bluetooth.discovering {
+        background-color: #3498db;
+        animation: pulse 2s infinite;
+    }
+
+    /* 可配对状态 */
+    #bluetooth.pairable {
+        background-color: #2ecc71;
+    }
+
+    /* 悬停效果 */
+    #bluetooth:hover {
+        background-color: #7d7daf;
+        transition: background-color 0.3s ease;
+    }
+
+    /* 搜索状态动画 */
+    @keyframes pulse {
+        0% {
+            background-color: #3498db;
+        }
+        50% {
+            background-color: #5dade2;
+        }
+        100% {
+            background-color: #3498db;
+        }
+    }
+
   '';
 }

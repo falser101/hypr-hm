@@ -10,32 +10,43 @@
         // "width": 1280, // Waybar width
         "spacing": 4, // Gaps between modules (4px)
         // Choose the order of the modules
+        "include": [
+          "$HOME/.config/waybar/modules/*json*"
+        ],
         "modules-left": [
             "hyprland/workspaces",
             "hyprland/submap",
-            "custom/media"
+            "custom/media",
+            "cpu",
+            "memory",
+            "temperature",
+            "backlight",
         ],
         "modules-center": [
             "wlr/taskbar"
         ],
         "modules-right": [
-            "mpd",
-            "idle_inhibitor",
-            "pulseaudio",
-            "network",
-            //"power-profiles-daemon",
-            "cpu",
-            "memory",
-            "temperature",
-            "backlight",
-            "keyboard-state",
-            // "hyprland/language",
-            // "battery",
-            // "battery#bat2",
-            "clock",
-            "tray",
-            "custom/power"
+            "group/pill#right1",
+            "group/pill#right2",
         ],
+        "group/pill#right1": {
+            "modules": [
+                "bluetooth",
+                "network",
+                "pulseaudio",
+                "pulseaudio#microphone",
+            ],
+            "orientation": "inherit"
+        },
+        "group/pill#right2": {
+            "modules": [
+                "keyboard-state",
+                "clock",
+                "tray",
+                "custom/power"
+            ],
+            "orientation": "inherit"
+        },
         // Modules configuration
         "hyprland/workspaces": {
             "all-outputs": true,
@@ -121,13 +132,6 @@
             // "timezone": "America/New_York",
             "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
             "format-alt": "{:%Y-%m-%d}"
-        },
-        "cpu": {
-            "format": "{usage}% ",
-            "tooltip": false
-        },
-        "memory": {
-            "format": "{}% "
         },
         "temperature": {
             // "thermal-zone": 2,

@@ -2,25 +2,21 @@
 
 {
   xdg.configFile."waybar/config.jsonc".text = ''
-    // -*- mode: jsonc -*-
     {
         // "layer": "top", // Waybar at top layer
         // "position": "bottom", // Waybar position (top|bottom|left|right)
-        "height": 28, // Waybar height (to be removed for auto height)
+        "height": 32, // Waybar height (to be removed for auto height)
         // "width": 1280, // Waybar width
         "spacing": 4, // Gaps between modules (4px)
         // Choose the order of the modules
         "include": [
-          "$HOME/.config/waybar/modules/*json*"
+          "modules/*jsonc*"
         ],
         "modules-left": [
             "hyprland/workspaces",
-            "hyprland/submap",
-            "custom/media",
             "cpu",
             "memory",
             "temperature",
-            "backlight",
         ],
         "modules-center": [
             "wlr/taskbar"
@@ -47,40 +43,6 @@
             ],
             "orientation": "inherit"
         },
-        // Modules configuration
-        "hyprland/workspaces": {
-            "all-outputs": true,
-            "on-scroll-up": "hyprctl dispatch workspace e+1",
-            "on-scroll-down": "hyprctl dispatch workspace e-1"
-        },
-        "wlr/taskbar": {
-            "all-outputs": true,
-            "active-first": false,
-            "markup": true,
-            "format": "{icon}",
-            "rotate": 0,
-            "spacing": 15,
-            "tooltip-format": "{title} | {app_id}",
-            "on-click": "activate",
-            "on-click-right": "fullscreen",
-            "on-click-middle": "close",
-            "class": "no-margin-padding",
-            "ignore-list": [
-                ""
-            ],
-            "app_ids-mapping": {
-                "firefoxdeveloperedition": "firefox-developer-edition",
-                "firefoxnightly": "firefox-nightly",
-                "Spotify Free": "Spotify"
-            },
-            "rewrite": {
-                "Firefox Web Browser": "Firefox",
-                "Foot Server": "Terminal",
-                "Spotify Free": "Spotify",
-                "org.kde.dolphin": "Dolphin",
-                "libreoffice-writer": "Writer"
-            }
-        },
         "keyboard-state": {
             "numlock": true,
             "capslock": true,
@@ -89,119 +51,6 @@
                 "locked": "",
                 "unlocked": ""
             }
-        },
-        "mpd": {
-            "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-            "format-disconnected": "Disconnected ",
-            "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-            "unknown-tag": "N/A",
-            "interval": 5,
-            "consume-icons": {
-                "on": " "
-            },
-            "random-icons": {
-                "off": "<span color=\"#f53c3c\"></span> ",
-                "on": " "
-            },
-            "repeat-icons": {
-                "on": " "
-            },
-            "single-icons": {
-                "on": "1 "
-            },
-            "state-icons": {
-                "paused": "",
-                "playing": ""
-            },
-            "tooltip-format": "MPD (connected)",
-            "tooltip-format-disconnected": "MPD (disconnected)"
-        },
-        "idle_inhibitor": {
-            "format": "{icon}",
-            "format-icons": {
-                "activated": "",
-                "deactivated": ""
-            }
-        },
-        "tray": {
-            // "icon-size": 21,
-            "spacing": 5,
-            "icon-size-multiplier": 1.6
-        },
-        "clock": {
-            // "timezone": "America/New_York",
-            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-            "format-alt": "{:%Y-%m-%d}"
-        },
-        "temperature": {
-            // "thermal-zone": 2,
-            // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-            "critical-threshold": 80,
-            // "format-critical": "{temperatureC}°C {icon}",
-            "format": "{temperatureC}°C {icon}",
-            "format-icons": ["", "", ""]
-        },
-        "backlight": {
-            // "device": "acpi_video1",
-            "format": "{percent}% {icon}",
-            "format-icons": ["", "", "", "", "", "", "", "", ""]
-        },
-        "battery": {
-            "states": {
-                // "good": 95,
-                "warning": 30,
-                "critical": 15
-            },
-            "format": "{capacity}% {icon}",
-            "format-full": "{capacity}% {icon}",
-            "format-charging": "{capacity}% ",
-            "format-plugged": "{capacity}% ",
-            "format-alt": "{time} {icon}",
-            // "format-good": "", // An empty format will hide the module
-            // "format-full": "",
-            "format-icons": ["", "", "", "", ""]
-        },
-        "battery#bat2": {
-            "bat": "BAT2"
-        },
-        "power-profiles-daemon": {
-          "format": "{icon}",
-          "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-          "tooltip": true,
-          "format-icons": {
-            "default": "",
-            "performance": "",
-            "balanced": "",
-            "power-saver": ""
-          }
-        },
-        "network": {
-            // "interface": "wlp2*", // (Optional) To force the use of this interface
-            "format-wifi": "{essid} ({signalStrength}%) ",
-            "format-ethernet": "{ipaddr}/{cidr} ",
-            "tooltip-format": "{ifname} via {gwaddr} ",
-            "format-linked": "{ifname} (No IP) ",
-            "format-disconnected": "Disconnected ⚠",
-            "format-alt": "{ifname}: {ipaddr}/{cidr}"
-        },
-        "pulseaudio": {
-            // "scroll-step": 1, // %, can be a float
-            "format": "{volume}% {icon} {format_source}",
-            "format-bluetooth": "{volume}% {icon} {format_source}",
-            "format-bluetooth-muted": " {icon} {format_source}",
-            "format-muted": " {format_source}",
-            "format-source": "{volume}% ",
-            "format-source-muted": "",
-            "format-icons": {
-                "headphone": "",
-                "hands-free": "",
-                "headset": "",
-                "phone": "",
-                "portable": "",
-                "car": "",
-                "default": ["", "", ""]
-            },
-            "on-click": "pavucontrol"
         },
         "custom/media": {
             "format": "{icon} {text}",

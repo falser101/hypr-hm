@@ -41,8 +41,8 @@
     }
 
     # 动画配置
-    $ANIMATION=diablo-2
-    $ANIMATION_PATH=./animations/diablo-2.conf
+    $ANIMATION=end4
+    $ANIMATION_PATH=./animations/end4.conf
     source = $ANIMATION_PATH
 
     # Dwindle布局配置

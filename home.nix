@@ -41,13 +41,15 @@ in
     grim
     slurp
     cliphist
-    wl-clip-persist
+    wl-clipboard
 
     # shell
     fastfetch
     imagemagick
 
     noto-fonts-emoji
+
+    wpsoffice-cn
   ];
 
   home.sessionVariables = {
@@ -59,6 +61,7 @@ in
     "hyprlock"
     "bluez"
     "blueman"
+    "pwvucontrol"
 
     "com.qq.weixin.work.deepin"
     "zed"

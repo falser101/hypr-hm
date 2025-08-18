@@ -12,7 +12,7 @@
     bindd = Control_L Alt_L, Delete, Toggle wlogout, exec, pkill wlogout || wlogout
 
     # waybar
-    bindd = Control_L, Alt_L, Toggle waybar, exec, pkill waybar || waybar
+    bindd = Alt_L, Control_R, Toggle waybar, exec, pkill waybar || waybar
 
     # 锁屏
     bindd = $mainMod, L, Lock Screen, exec, hyprlock
@@ -27,6 +27,7 @@
     bind = $mainMod, V, exec, pkill wofi || cliphist list | wofi --style ~/.config/wofi/style.css --dmenu | cliphist decode | wl-copy
 
     # 基础操作
+    bindd = $mainMod, B, Open Browser, exec, $browser
     bind = $mainMod, T, exec, $terminal
     bind = $mainMod, Q, killactive,
     bind = $mainMod, Delete, exit,

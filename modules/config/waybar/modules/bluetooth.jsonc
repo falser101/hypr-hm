@@ -1,7 +1,8 @@
 {
   "bluetooth": {
+    "format": "",  // 默认显示蓝牙图标
     "rotate": 0,
-    "format-disabled": "",
+    "format-disabled": "󰂲",  // 蓝牙关闭时显示的图标
     "format-connected": " {num_connections}",
     "format-connected-battery": "{icon} {num_connections}",
     // "format-connected-battery": "{icon} {device_alias}-{device_battery_percentage}%",
@@ -11,6 +12,6 @@
     "tooltip-format-connected": "{controller_alias}\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{icon} {device_battery_percentage}%",
-    "on-click": "blueman-manager",
-  },
+    "on-click": "blueman-manager"
+  }
 }

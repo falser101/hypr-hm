@@ -103,8 +103,13 @@
     # 修复XWayland窗口拖动问题
     windowrule = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
 
+    windowrulev2 = workspace 3, class:^zen$
     windowrulev2 = workspace 6, class:^wemeetapp$, title:^wemeetapp$
     windowrulev2 = workspace 6, class:^wemeetapp$, title:^腾讯会议$
     windowrulev2 = workspace 6, class:^Meeting$, title:^飞书会议$
+    windowrulev2 = workspace 9, class:^clash-verge$
+
+    # Jetbrains apps focus issues
+    windowrulev2 = noinitialfocus,xwayland:1
   '';
 }

@@ -27,7 +27,6 @@ in
 
     # hyprland
     hyprpaper
-    hyprpolkitagent
     hypridle
     hyprpicker
     hyprsunset
@@ -49,6 +48,11 @@ in
     fastfetch
     imagemagick
     nixd
+    kdePackages.dolphin
+    kdePackages.konsole
+    kdePackages.polkit-kde-agent-1
+
+    dbeaver-bin
 
     noto-fonts-emoji
   ];
@@ -74,7 +78,6 @@ in
     "clash-verge-rev-bin"
     "jetbrains-toolbox"
     "onlyoffice-bin"
-    "dolphin"
 
     "linyaps"
     "vim"

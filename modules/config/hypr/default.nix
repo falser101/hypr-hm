@@ -2,6 +2,8 @@
 
 {
   xdg.configFile."hypr/animations".source = ./animations;
+  xdg.configFile."hypr/hyprlock".source = ./hyprlock;
+  xdg.configFile."hypr/themes".source = ./themes;
   xdg.configFile."hypr/autostart.conf".source = ./autostart.conf;
   xdg.configFile."hypr/env.conf".source = ./env.conf;
   xdg.configFile."hypr/hyprland.conf".source = ./hyprland.conf;

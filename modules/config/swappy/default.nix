@@ -1,7 +1,5 @@
 {...}:
 
 {
-  imports = [
-    ./config.nix
-  ];
+  xdg.configFile."swappy/config".source = ./config;
 }

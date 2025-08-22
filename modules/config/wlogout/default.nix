@@ -1,8 +1,6 @@
 {...}:
 
 {
-  imports = [
-    ./style.nix
-    ./layout.nix
-  ];
+  xdg.configFile."wlogout/layout".source = ./layout;
+  xdg.configFile."wlogout/style.css".source = ./style.css;
 }

@@ -1,7 +1,5 @@
 {...}:
 
 {
-  imports = [
-    ./style.nix
-  ];
+  xdg.configFile."wofi/style.css".source = ./style.css;
 }

@@ -42,14 +42,15 @@ in
     slurp
     cliphist
     wl-clipboard
+    pavucontrol
+    networkmanagerapplet
 
     # shell
     fastfetch
     imagemagick
+    nixd
 
     noto-fonts-emoji
-
-    wpsoffice-cn
   ];
 
   home.sessionVariables = {

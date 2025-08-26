@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 
 {
   # 定义可配置的选项：AUR软件包列表
@@ -13,7 +13,7 @@
   # 实际配置逻辑
   config = lib.mkIf (config.aur.packages != []) {
     home.activation.installAurPackages = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      script_path="$HOME/.local/bin/aur_install.sh"
+      script_path="$HOME/.nix-profile/bin/aurInstall"
 
       # 检查aur-install脚本是否存在
       if command -v "$script_path" &> /dev/null; then

@@ -1,11 +1,5 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
-let
-  aurPackages = [
-    "hyprland"
-    "hyprlock"
-  ];
-in
 {
   imports = [
       ./modules/config
@@ -48,6 +42,7 @@ in
     fastfetch
     imagemagick
     nixd
+    nil
     kdePackages.dolphin
     kdePackages.konsole
     kdePackages.polkit-kde-agent-1

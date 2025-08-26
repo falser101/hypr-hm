@@ -2,9 +2,9 @@
 
 {
   imports = [
-      ./modules/config
-      ./modules/local
-      ./modules/aur-install.nix
+    ./modules/config
+    ./modules/local
+    ./modules/aur-install.nix
   ];
   nixpkgs.config = {
     allowUnfree = true;
@@ -20,7 +20,6 @@
     jetbrains-mono
 
     # hyprland
-    hyprpaper
     hypridle
     hyprpicker
     hyprsunset
@@ -31,6 +30,7 @@
     dunst
     wofi
     swappy
+    swww
     grim
     slurp
     cliphist
@@ -53,7 +53,7 @@
   ];
 
   home.sessionVariables = {
-      PATH = "$HOME/.local/bin:$PATH";
+    PATH = "$HOME/.local/bin:$PATH";
   };
 
   aur.packages = [

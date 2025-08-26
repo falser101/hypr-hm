@@ -20,12 +20,11 @@
       "music-notification": "󰝚<span foreground='white'><sup></sup></span>",
       "volume-notification": "󰕿<span foreground='white'><sup></sup></span>",
       "dnd": "",
-      "none": ""
+      "none": "",
     },
     "return-type": "json",
     // "exec-if": "which dunstctl",
     "exec-if": "dunstctl  is-paused &> /dev/null", // This is to check if dunst is running
-    "exec": "hyde-shell notifications",
     "on-scroll-down": "sleep 0.1 && dunstctl history-pop",
     "on-click": "dunstctl set-paused toggle",
     "on-click-middle": "dunstctl history-clear",
@@ -38,7 +37,7 @@
       "show": "dunstctl history-pop",
       "toggle-dnd": "dunstctl set-paused toggle",
       "clear": "dunstctl history-clear",
-      "close-all": "dunstctl close-all"
-    }
-  }
+      "close-all": "dunstctl close-all",
+    },
+  },
 }

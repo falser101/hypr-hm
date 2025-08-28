@@ -37,6 +37,8 @@
     wl-clipboard
     pavucontrol
     networkmanagerapplet
+    # 硬件监控模块
+    lm_sensors
 
     # shell
     fastfetch

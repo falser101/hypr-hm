@@ -1,0 +1,9 @@
+{
+  "custom/gpuinfo": {
+    "exec": "gpu-temp",
+    "interval": 5,
+    "format": "<span color='#89b4fa'>󰘚</span> {}",
+    "tooltip": true,
+    "return-type": "json",
+  },
+}

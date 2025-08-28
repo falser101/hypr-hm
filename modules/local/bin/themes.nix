@@ -73,7 +73,7 @@ with pkgs.lib;
         return 1
       fi
 
-      local selected_theme=$(printf '%s\n' "''${themes_list[@]}" | wofi --dmenu --prompt "选择主题:" --width 300 --height 200)
+      local selected_theme=$(printf '%s\n' "''${themes_list[@]}" | wofi --dmenu --prompt "选择主题:")
 
       if [ -n "$selected_theme" ]; then
         apply_theme "$selected_theme"

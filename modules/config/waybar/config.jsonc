@@ -16,7 +16,7 @@
   },
   "modules-center": ["group/pill#center"],
   "group/pill#center": {
-    "modules": ["wlr/taskbar", "custom/dunst"],
+    "modules": ["wlr/taskbar"],
     "orientation": "inherit",
   },
   "modules-right": ["group/pill#right1", "group/pill#right2"],
@@ -25,17 +25,8 @@
     "orientation": "inherit",
   },
   "group/pill#right2": {
-    "modules": ["keyboard-state", "clock", "tray", "custom/power"],
+    "modules": ["custom/dunst", "tray", "clock", "custom/power"],
     "orientation": "inherit",
-  },
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": "{name} {icon}",
-    "format-icons": {
-      "locked": "",
-      "unlocked": "",
-    },
   },
   "custom/power": {
     "format": "⏻ ",

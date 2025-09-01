@@ -61,6 +61,8 @@
   aur.packages = [
     "hyprland"
     "hyprlock"
+    "hyprpolkitagent"
+    "sddm-astronaut-theme"
     "bluez"
     "blueman"
     "pwvucontrol"

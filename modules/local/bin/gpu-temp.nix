@@ -23,7 +23,7 @@ with pkgs.lib;
     sclk=$(echo "$gpu_info" | grep "sclk" | awk '{print $2 " " $3}')
 
     # 提取温度数值用于计算百分比（假设最高温度为100°C）
-    gpu_temp_num=$(echo "$edge_temp" | sed 's/[+°C]//g')
+    gpu_temp_num=$(echo "$edge_temp" | sed 's/\..*//' | sed 's/[+°C]//g')
     gpu_percent=$(( gpu_temp_num * 100 / 100 ))  # 分母为最高温度阈值
 
     # 构建详细tooltip信息

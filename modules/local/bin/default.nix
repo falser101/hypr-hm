@@ -10,6 +10,7 @@
     ./themes.nix
     ./cpu-temp.nix
     ./gpu-temp.nix
+    ./dunst-status.nix
   ];
 
   # 将脚本常量添加到 home.packages
@@ -22,6 +23,7 @@
     config.theme-switcher # 来自 themes.nix
     config.cpu-temp
     config.gpu-temp
+    config.dunst-status
   ];
 
 }

@@ -67,14 +67,14 @@ window#waybar {
     padding-right: 1.2em;
     margin-right: 0.3em;
     animation: ws_active 20s ease-in-out 1;
-    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+    transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #workspaces button:hover {
     background: @wb-hvr-bg;
     color: @wb-hvr-fg;
     animation: ws_hover 20s ease-in-out 1;
-    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+    transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar button {
@@ -99,23 +99,20 @@ window#waybar {
     padding-right: 1.2em;
     margin-right: 0.3em;
     animation: tb_active 20s ease-in-out 1;
-    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+    transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar button:hover {
     background: @wb-hvr-bg;
     color: @wb-hvr-color;
     animation: tb_hover 20s ease-in-out 1;
-    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+    transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
-
-
 
 #workspaces,
 #taskbar {
     padding: 0em;
 }
-
 
 window#waybar.top .modules-left,
 window#waybar.top .modules-center,
@@ -127,7 +124,6 @@ window#waybar.bottom .modules-right {
     padding-right: 0.3em;
     margin-left: 0.3em;
     margin-right: 0.3em;
-
 }
 
 window#waybar.top label.module,
@@ -211,29 +207,39 @@ window#waybar.bottom button {
     margin: 0.41em 0.11em;
     border: 0em;
     /* padding: 0.1em 0.5em; */
-
 }
 
 window#waybar.left button,
 window#waybar.right button {
     margin: 0.11em 0.41em;
-    border: 0em
+    border: 0em;
 }
-
 
 tooltip {
     /* all: unset; */
     background: @main-bg;
     color: @main-fg;
     border-width: 1em;
-    border-color: @main-fg ;
+    border-color: @main-fg;
+}
+
+#tray {
+    color: @main-fg; /* 白色字体 */
+    background-color: @main-bg; /* 背景色 */
+    padding: 0 10px;
+    margin: 2px 0;
+    border-radius: 5px;
 }
 
 #tray menu * {
+    color: @main-fg; /* 白色字体 */
+    background-color: @main-bg; /* 背景色 */
     min-height: 1.6em;
 }
 
 #tray menu separator {
+    color: @main-fg; /* 白色字体 */
+    background-color: @main-bg; /* 背景色 */
     min-height: 0.1em;
 }
 

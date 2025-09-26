@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./Code
     ./dunst
     ./fastfetch
     ./hypr

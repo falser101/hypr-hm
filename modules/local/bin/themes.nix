@@ -56,6 +56,18 @@ with pkgs.lib;
         pkill -USR1 kitty 2>/dev/null && echo "✓ Kitty 主题已重载"
       fi
 
+      # kvantum
+      if [ -f "$theme_dir/kvantum/kvantum.theme" ]; then
+        ln -sf "$theme_dir/kvantum/kvantum.theme" "$CONFIG_ROOT/Kvantum/wallbash/wallbash.svg"
+        pkill -USR1 kitty 2>/dev/null && echo "✓ Kitty 主题已重载"
+      fi
+
+      # kvantum
+      if [ -f "$theme_dir/kvantum/kvconfig.theme" ]; then
+        ln -sf "$theme_dir/kvantum/kvconfig.theme" "$CONFIG_ROOT/Kvantum/wallbash/wallbash.kvconfig"
+        pkill -USR1 kitty 2>/dev/null && echo "✓ Kitty 主题已重载"
+      fi
+
       # 重启Waybar
       pkill waybar 2>/dev/null
       sleep 0.2

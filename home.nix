@@ -23,6 +23,11 @@
     hypridle
     hyprpicker
     hyprsunset
+    hyprpolkitagent
+
+    bluez
+    blueman
+    pwvucontrol
 
     # Window Manager
     wlogout
@@ -37,6 +42,7 @@
     wl-clipboard
     pavucontrol
     networkmanagerapplet
+    htop
     # 硬件监控模块
     lm_sensors
 
@@ -47,11 +53,13 @@
     nil
     kdePackages.dolphin
     kdePackages.konsole
-    kdePackages.polkit-kde-agent-1
 
     dbeaver-bin
+    qq
 
     noto-fonts-emoji
+    wqy_microhei
+    wqy_zenhei
   ];
 
   home.sessionVariables = {
@@ -61,11 +69,8 @@
   aur.packages = [
     "hyprland"
     "hyprlock"
-    "hyprpolkitagent"
     "sddm-astronaut-theme"
-    "bluez"
-    "blueman"
-    "pwvucontrol"
+    "kitty"
 
     "com.qq.weixin.work.deepin"
     "zed"
@@ -73,20 +78,18 @@
     "visual-studio-code-bin"
     "postman-bin"
     "feishu-bin"
-    "linuxqq"
     "clash-verge-rev-bin"
     "jetbrains-toolbox"
     "onlyoffice-bin"
+    "localsend"
 
     "linyaps"
     "vim"
-    "kitty"
     # 打印机
     "cups"
     "jdk17-openjdk"
     "jdk21-openjdk"
     "jdk8-openjdk"
-    "htop"
     # firefox 语音合成
     "speech-dispatcher"
 
@@ -95,10 +98,9 @@
     "fcitx5-configtool"
     "fcitx5-gtk"
     "fcitx5-qt"
-
-    "wqy-microhei"
-    "wqy-zenhei"
   ];
+
+  services.hyprpolkitagent.enable = true;
 
   programs.home-manager.enable = true;
 }

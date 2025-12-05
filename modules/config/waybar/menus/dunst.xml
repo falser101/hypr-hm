@@ -1,34 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 增加GTK版本声明，确保解析兼容性 -->
 <interface>
-    <object class="GtkMenu" id="menu">
-        <child>
-            <object class="GtkMenuItem" id="show">
-                <property name="label">󰋚  Show History</property>
-            </object>
-        </child>
-        <child>
-            <object class="GtkMenuItem" id="toggle-dnd">
-                <property name="label">  Toggle DND</property>
-            </object>
-        </child>
+  <requires lib="gtk+" version="3.0"/>
+  <object class="GtkMenu" id="menu">
+    <!-- 显式设置菜单可见（核心修复：确保Widget有效） -->
+    <property name="visible">True</property>
 
+    <child>
+      <object class="GtkMenuItem" id="show">
+        <property name="label">󰋚  Show History</property>
+        <property name="visible">True</property>
+      </object>
+    </child>
 
-        <child>
-            <object class="GtkSeparatorMenuItem" id="delimiter1" />
-        </child>
+    <child>
+      <object class="GtkMenuItem" id="toggle-dnd">
+        <property name="label">  Toggle DND</property>
+        <property name="visible">True</property>
+      </object>
+    </child>
 
+    <child>
+      <object class="GtkSeparatorMenuItem" id="delimiter1">
+        <property name="visible">True</property>
+      </object>
+    </child>
 
-        <child>
-            <object class="GtkMenuItem" id="clear">
-                <property name="label">󰎟  Clear History</property>
-            </object>
-        </child>
-        <child>
-            <object class="GtkMenuItem" id="close">
-                <property name="label">󰱞  Close</property>
-            </object>
-        </child>
-        <child>
-        </child>
-    </object>
+    <child>
+      <object class="GtkMenuItem" id="clear">
+        <property name="label">󰎟  Clear History</property>
+        <property name="visible">True</property>
+      </object>
+    </child>
+
+    <child>
+      <object class="GtkMenuItem" id="close">
+        <property name="label">󰱞  Close</property>
+        <property name="visible">True</property>
+      </object>
+    </child>
+    <!-- 移除多余的空child节点 -->
+  </object>
 </interface>

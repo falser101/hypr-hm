@@ -1,0 +1,10 @@
+layer-rule {
+    match namespace="waybar"
+    match at-startup=true
+
+    // Properties that apply continuously.
+    opacity 0.9
+    block-out-from "screencast"
+
+    place-within-backdrop true
+}

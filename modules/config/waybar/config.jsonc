@@ -7,7 +7,7 @@
   // Choose the order of the modules
   "modules-left": ["group/pill#left1", "group/pill#left2"],
   "group/pill#left1": {
-    "modules": ["hyprland/workspaces"],
+    "modules": ["niri/workspaces"],
     "orientation": "inherit",
   },
   "group/pill#left2": {
@@ -25,7 +25,7 @@
     "orientation": "inherit",
   },
   "group/pill#right2": {
-    "modules": ["custom/dunst", "tray", "clock", "custom/power"],
+    "modules": ["custom/cliphist", "custom/dunst", "tray", "clock", "custom/power"],
     "orientation": "inherit",
   },
   "custom/power": {
@@ -37,7 +37,7 @@
     "modules/bluetooth.jsonc",
     "modules/clock.jsonc",
     "modules/cpu.jsonc",
-    "modules/hyprland-workspaces.jsonc",
+    "modules/niri-workspaces.jsonc",
     "modules/memory.jsonc",
     "modules/network.jsonc",
     "modules/privacy.jsonc",
@@ -45,6 +45,7 @@
     "modules/pulseaudio#microphone.jsonc",
     "modules/tray.jsonc",
     "modules/wlr-taskbar.jsonc",
+    "modules/custom-cliphist.jsonc",
     "modules/custom-dunst.jsonc",
     "modules/custom-cpuinfo.jsonc",
     "modules/custom-gpuinfo.jsonc",

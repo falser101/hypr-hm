@@ -5,5 +5,7 @@
     "format": "<span color='#89b4fa'>󰘚</span> {}",
     "tooltip": true,
     "return-type": "json",
+    "menu": "on-click-right",
+    "menu-file": "~/.config/waybar/menus/gpuinfo.xml",
   },
 }

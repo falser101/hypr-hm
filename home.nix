@@ -16,47 +16,12 @@
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
-    # 字体
-    jetbrains-mono
-
-    hypridle
-    hyprpicker
-    hyprsunset
-    hyprpolkitagent
-
-    bluez
-    blueman
-    pwvucontrol
-
-    # Window Manager
-    wlogout
     waybar
     dunst
-    wofi
-    swappy
     swww
-    grim
-    slurp
-    cliphist
-    wl-clipboard
-    pavucontrol
-    networkmanagerapplet
-    htop
-    # 硬件监控模块
-    lm_sensors
-
-    # shell
-    fastfetch
-    imagemagick
+    rofi
     nixd
     nil
-    kdePackages.dolphin
-    kdePackages.konsole
-    qq
-
-    noto-fonts-emoji
-    wqy_microhei
-    wqy_zenhei
   ];
 
   home.pointerCursor = {
@@ -67,32 +32,11 @@
     size = 16;
   };
 
-  gtk = {
-    enable = true;
-
-    theme = {
-      package = pkgs.flat-remix-gtk;
-      name = "Flat-Remix-GTK-Grey-Darkest";
-    };
-
-    iconTheme = {
-      package = pkgs.adwaita-icon-theme;
-      name = "Adwaita";
-    };
-
-    font = {
-      name = "Sans";
-      size = 11;
-    };
-  };
-
   home.sessionVariables = {
     PATH = "$HOME/.local/bin:$PATH";
   };
 
   aur.packages = [
-    "hyprland"
-    "hyprlock"
     "sddm-astronaut-theme"
     "kitty"
 
@@ -100,11 +44,8 @@
     "zed"
     "zen-browser-bin"
     "visual-studio-code-bin"
-    "postman-bin"
     "feishu-bin"
-    "clash-verge-rev-bin"
     "jetbrains-toolbox"
-    "onlyoffice-bin"
     "localsend"
 
     "linyaps"
@@ -125,7 +66,6 @@
 
     # waybar Electron apps tray
     "libappindicator-gtk3"
-    "libappindicator-gtk2"
   ];
 
   services.hyprpolkitagent.enable = true;

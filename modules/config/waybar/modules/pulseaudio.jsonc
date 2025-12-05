@@ -4,10 +4,8 @@
     "rotate": 0,
     "format-muted": "婢",
     "on-click": "pavucontrol -t 3",
-    "on-click-right": "hyde-shell volumecontrol -s ''",
-    "on-click-middle": "hyde-shell volumecontrol -o m",
-    "on-scroll-up": "hyde-shell volumecontrol -o i",
-    "on-scroll-down": "hyde-shell volumecontrol -o d",
+    "on-scroll-up": "volume-ctl",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
     "tooltip-format": "{icon} {desc} // {volume}%",
     "scroll-step": 5,
     "format-icons": {
@@ -17,7 +15,7 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
-    }
-  }
+      "default": ["", "", ""],
+    },
+  },
 }

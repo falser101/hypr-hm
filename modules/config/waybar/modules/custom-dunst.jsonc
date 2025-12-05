@@ -17,7 +17,7 @@
     "tooltip": true,
     "escape": true,
     "menu": "on-click-right",
-    "menu-file": "${HYDE_WAYBAR_MENU_DIR:-$XDG_CONFIG_HOME/waybar/menus}/dunst.xml",
+    "menu-file": "~/.config/waybar/menus/dunst.xml",
     "menu-actions": {
       "show": "dunstctl history-pop",
       "toggle-dnd": "dunstctl set-paused toggle",

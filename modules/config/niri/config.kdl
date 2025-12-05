@@ -1,0 +1,11 @@
+// 主配置：引入所有功能模块
+include "environment.kdl"
+include "input.kdl"
+include "outputs.kdl"
+include "layout.kdl"
+include "startup.kdl"
+include "misc.kdl"
+include "animations.kdl"
+include "window-rules.kdl"
+include "hotkeys.kdl"
+include "layer-rule.kdl"

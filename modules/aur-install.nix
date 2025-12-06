@@ -13,7 +13,7 @@
   # 实际配置逻辑
   config = lib.mkIf (config.aur.packages != []) {
     home.activation.installAurPackages = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      script_path="$HOME/.nix-profile/bin/aurInstall"
+      script_path="~/.local/bin/aurInstall"
 
       # 检查aur-install脚本是否存在
       if command -v "$script_path" &> /dev/null; then

@@ -17,11 +17,16 @@
 
   home.packages = with pkgs; [
     waybar
+    wlogout
     dunst
     swww
     rofi
     nixd
     nil
+    font-awesome
+    wl-clipboard
+    cliphist
+    unzip
   ];
 
   home.pointerCursor = {
@@ -67,8 +72,6 @@
     # waybar Electron apps tray
     "libappindicator-gtk3"
   ];
-
-  services.hyprpolkitagent.enable = true;
 
   programs.home-manager.enable = true;
 }

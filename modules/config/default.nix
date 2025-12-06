@@ -3,7 +3,6 @@
 {
   imports = [
     ./fastfetch
-    ./kitty
     ./qt5ct
     ./qt6ct
     ./waybar
@@ -13,4 +12,6 @@
   xdg.configFile."dunst/dunstrc".source = ./dunst/dunstrc;
   xdg.configFile."niri".source = ./niri;
   xdg.configFile."hypr".source = ./hypr/Style-2;
+  xdg.configFile."kitty/kitty.conf".source = ./kitty/kitty.conf;
+  xdg.configFile."kitty/theme.conf".source = ./kitty/tokyo-night.conf;
 }

@@ -16,6 +16,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
 
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+Shift+T hotkey-overlay-title="Switch Theme: Theme" { spawn "switch-theme"; }
     Mod+A hotkey-overlay-title="Run an Application: rofi" { spawn-sh "pkill -x rofi || rofi -show drun -config /home/falser/Projects/NiDE/.config/rofi/themes/KooL_style-5.rasi"; }
     Mod+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Mod+V hotkey-overlay-title="Open Clipboard: rofi" { spawn-sh "pkill -x rofi || cliphist list | rofi -config /home/falser/Projects/NiDE/.config/rofi/clipboard.rasi -dmenu | cliphist decode | wl-copy"; }
@@ -230,9 +231,6 @@ binds {
     // Finer height adjustments when in column with other windows.
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
-
-    // Move the focused window between the floating and the tiling layout.
-    Mod+Shift+T { switch-focus-between-floating-and-tiling; }
 
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,

@@ -1,0 +1,13 @@
+@define-color bar-bg rgba(0, 0, 0, 0.7);
+@define-color main-bg #bcc0cc;
+@define-color main-fg #4c4f69; /* ← 深灰文字 */
+
+@define-color wb-act-bg #8839ef;
+@define-color wb-act-fg #eff1f5;
+
+@define-color wb-hvr-bg #fe640b;
+@define-color wb-hvr-fg #eff1f5;
+
+@define-color wb-color #4c4f69;
+@define-color wb-act-color #eff1f5;
+@define-color wb-hvr-color #eff1f5;

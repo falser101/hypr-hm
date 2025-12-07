@@ -1,0 +1,14 @@
+/* theme.css for Macchiato */
+@define-color bar-bg rgba(0, 0, 0, 0.7);
+@define-color main-bg #414559;
+@define-color main-fg #cad3f5; /* ← 浅色文字 */
+
+@define-color wb-act-bg #c6a0f6;
+@define-color wb-act-fg #24273a;
+
+@define-color wb-hvr-bg #f5a97f;
+@define-color wb-hvr-fg #24273a;
+
+@define-color wb-color #cad3f5;
+@define-color wb-act-color #24273a;
+@define-color wb-hvr-color #24273a;

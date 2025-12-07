@@ -25,7 +25,13 @@
     "orientation": "inherit",
   },
   "group/pill#right2": {
-    "modules": ["custom/cliphist", "custom/dunst", "tray", "clock", "custom/power"],
+    "modules": [
+      "custom/cliphist",
+      "custom/dunst",
+      "tray",
+      "clock",
+      "custom/power",
+    ],
     "orientation": "inherit",
   },
   "custom/power": {

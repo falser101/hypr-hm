@@ -1,0 +1,54 @@
+[global]
+    # 屏幕位置
+    origin = top-center
+    # 偏移量
+    offset = 20x50
+    # 通知宽度
+    width = (0, 400)
+    # 最大通知数
+    max_icon_size = 64
+    # 动画
+    animation = slide-left
+    # 分离通知
+    separator_height = 2
+    padding = 16
+    horizontal_padding = 16
+    frame_width = 2
+
+    # === 颜色（Catppuccin Frappé）===
+    # 背景与文字
+    background = "#303446"          # base
+    foreground = "#c6d0f5"          # text
+
+    # 边框（frame）
+    frame_color = "#babbf1"         # lavender (active border in kitty)
+
+    # 分隔线颜色（使用边框色）
+    separator_color = frame
+
+    # 高亮（如鼠标悬停）
+    highlight = "#ca9ee6"           # mauve
+
+    # 字体（推荐 Nerd Font 或等宽）
+    font = JetBrainsMono Nerd Font 10
+
+    # 其他
+    dmenu = /usr/bin/rofi -dmenu -p "Dunst"
+    browser = /usr/bin/xdg-open
+    always_run_script = true
+
+[urgency_low]
+    background = "#303446"
+    foreground = "#8caaee"          # blue (low urgency)
+    timeout = 5
+
+[urgency_normal]
+    background = "#303446"
+    foreground = "#c6d0f5"          # text
+    timeout = 10
+
+[urgency_critical]
+    background = "#303446"
+    foreground = "#e78284"          # red (critical)
+    frame_color = "#e78284"
+    timeout = 10                     # 永不自动消失

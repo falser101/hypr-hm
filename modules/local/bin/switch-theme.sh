@@ -7,6 +7,8 @@ THEME_ROOT="$HOME/.local/share/nide/themes/"
 # 2. 支持的应用列表（key=应用名，value=配置文件路径+重载命令）
 declare -A APPS=(
   ["kitty"]="${HOME}/.config/kitty/theme.conf|kitty @ load-config"
+  ["dunst"]="${HOME}/.config/dunst/dunstrc|pkill -x dunst || dunst &"
+  ["waybar"]="${HOME}/.config/waybar/theme.css|pkill waybar || waybar &"
 )
 # 3. 默认主题（首次运行用）
 DEFAULT_THEME="frappe"

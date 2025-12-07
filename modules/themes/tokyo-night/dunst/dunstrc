@@ -1,0 +1,42 @@
+[global]
+    # Position & Geometry
+    origin = top-center
+    offset = 20x50
+    width = (0, 420)
+    max_icon_size = 64
+    animation = slide-left
+    separator_height = 2
+    padding = 16
+    horizontal_padding = 16
+    frame_width = 2
+
+    # === Tokyo Night Colors ===
+    background = "#24283b"          # main background (from kitty config)
+    foreground = "#a9b1d6"          # main text
+    frame_color = "#3d59a1"         # active border / accent (blue)
+    separator_color = frame
+    highlight = "#7aa2f7"           # blue highlight (color4)
+
+    # Font (use a Nerd Font for icon support)
+    font = JetBrainsMono Nerd Font 10
+
+    # Misc
+    dmenu = /usr/bin/rofi -dmenu -p "Dunst"
+    browser = /usr/bin/xdg-open
+    always_run_script = true
+
+[urgency_low]
+    background = "#24283b"
+    foreground = "#73daca"          # green (color2) – calm, low priority
+    timeout = 5
+
+[urgency_normal]
+    background = "#24283b"
+    foreground = "#a9b1d6"          # default text
+    timeout = 10
+
+[urgency_critical]
+    background = "#24283b"
+    foreground = "#f7768e"          # red (color1) – urgent!
+    frame_color = "#f7768e"
+    timeout = 0                     # persistent until dismissed

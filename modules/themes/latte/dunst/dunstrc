@@ -1,0 +1,37 @@
+[global]
+    origin = top-center
+    offset = 20x50
+    width = (0, 400)
+    max_icon_size = 64
+    animation = slide-left
+    separator_height = 2
+    padding = 16
+    horizontal_padding = 16
+    frame_width = 2
+
+    background = "#eff1f5"          # base
+    foreground = "#4c4f69"          # text
+    frame_color = "#7287fd"         # lavender
+    separator_color = frame
+    highlight = "#8839ef"           # mauve
+
+    font = JetBrainsMono Nerd Font 10
+    dmenu = /usr/bin/rofi -dmenu -p "Dunst"
+    browser = /usr/bin/xdg-open
+    always_run_script = true
+
+[urgency_low]
+    background = "#eff1f5"
+    foreground = "#1e66f5"          # blue
+    timeout = 5
+
+[urgency_normal]
+    background = "#eff1f5"
+    foreground = "#4c4f69"          # text
+    timeout = 10
+
+[urgency_critical]
+    background = "#eff1f5"
+    foreground = "#d20f39"          # red
+    frame_color = "#d20f39"
+    timeout = 0

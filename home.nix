@@ -5,6 +5,7 @@
     ./modules/config
     ./modules/local
     ./modules/aur-install.nix
+    ./modules/theme.nix
   ];
   nixpkgs.config = {
     allowUnfree = true;

@@ -31,6 +31,10 @@
     text = builtins.readFile ./bin/wallpaper.sh;
     executable = true;
   };
+  home.file.".local/bin/switch-theme" = {
+    text = builtins.readFile ./bin/switch-theme.sh;
+    executable = true;
+  };
   home.file.".local/share/wlogout" = {
     source = ./share/wlogout;
   };

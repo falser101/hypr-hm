@@ -17,7 +17,6 @@
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
-    waybar
     wlogout
     dunst
     swww
@@ -28,6 +27,10 @@
     wl-clipboard
     cliphist
     unzip
+    inter-nerdfont
+    slurp
+    grim
+    swappy
   ];
 
   home.pointerCursor = {
@@ -44,6 +47,7 @@
 
   aur.packages = [
     "sddm-astronaut-theme"
+    "libappindicator-gtk3"
     "kitty"
 
     "com.qq.weixin.work.deepin"

@@ -8,6 +8,7 @@
     ./wlogout
     ./swappy
   ];
+  xdg.configFile."fontconfig/fonts.conf".source = ./fontconfig/fonts.conf;
   xdg.configFile."kitty/kitty.conf".source = ./kitty/kitty.conf;
   xdg.configFile."qt5ct/colors.conf".source = ./qt5ct/colors.conf;
   xdg.configFile."qt5ct/qt5ct.conf".source = ./qt5ct/qt5ct.conf;

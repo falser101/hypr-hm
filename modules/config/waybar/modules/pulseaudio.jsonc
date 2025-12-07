@@ -2,7 +2,7 @@
   "pulseaudio": {
     "format": "{icon} {volume}",
     "rotate": 0,
-    "format-muted": "婢",
+    "format-muted": "",
     "on-click": "pavucontrol -t 3",
     "on-scroll-up": "volume-ctl",
     "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",

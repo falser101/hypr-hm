@@ -2,14 +2,14 @@
     # 屏幕位置
     origin = top-center
     # 偏移量
-    offset = 20x50
+    offset = 0x0
     # 通知宽度
-    width = (0, 400)
+    width = 400
+    max_icon_size = 64
     # 最大通知数
     max_icon_size = 64
-    # 动画
-    animation = slide-left
     # 分离通知
+    gap_size = 5
     separator_height = 2
     padding = 16
     horizontal_padding = 16

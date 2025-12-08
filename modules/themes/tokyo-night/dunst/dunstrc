@@ -1,12 +1,12 @@
 [global]
     # Position & Geometry
     origin = top-center
-    offset = 20x50
-    width = (0, 420)
+    offset = 0x0
+    width = 400
     max_icon_size = 64
-    animation = slide-left
     separator_height = 2
     padding = 16
+    gap_size = 5
     horizontal_padding = 16
     frame_width = 2
 

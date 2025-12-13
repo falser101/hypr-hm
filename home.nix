@@ -17,20 +17,7 @@
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
-    wlogout
-    dunst
-    swww
-    rofi
-    nixd
-    nil
-    font-awesome
-    wl-clipboard
-    cliphist
-    unzip
-    inter-nerdfont
-    slurp
-    grim
-    swappy
+
   ];
 
   home.pointerCursor = {
@@ -47,15 +34,24 @@
 
   aur.packages = [
     "sddm-astronaut-theme"
-    "libappindicator-gtk3"
     "kitty"
+    "waybar"
+    "wlogout"
+    "dunst"
+    "swww"
+    "rofi"
+    "otf-font-awesome"
+    "wl-clipboard"
+    "cliphist"
+    "unzip"
+    "slurp"
+    "grim"
+    "swappy"
 
-    "com.qq.weixin.work.deepin"
     "zed"
-    "zen-browser-bin"
+    "zen-browser"
     "visual-studio-code-bin"
     "feishu-bin"
-    "jetbrains-toolbox"
     "localsend"
 
     "linyaps"

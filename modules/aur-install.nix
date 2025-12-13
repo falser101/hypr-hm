@@ -5,23 +5,23 @@
   options = {
     aur.packages = lib.mkOption {
       type = lib.types.listOf lib.types.str;
-      default = [];
+      default = [ ];
       description = "需要通过paru安装的AUR软件包列表";
     };
   };
 
   # 实际配置逻辑
-  config = lib.mkIf (config.aur.packages != []) {
+  config = lib.mkIf (config.aur.packages != [ ]) {
     home.activation.installAurPackages = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      script_path="~/.local/bin/aurInstall"
+      script_path="${config.home.homeDirectory}/.local/bin/aurInstall"
 
-      # 检查aur-install脚本是否存在
-      if command -v "$script_path" &> /dev/null; then
+      # 检查脚本是否存在且可执行
+      if [ -x "$script_path" ]; then
         echo "正在检查并安装AUR软件包..."
-        # 执行脚本并传递软件包参数
-        "$script_path" ${lib.concatStringsSep " " config.aur.packages}
+        # 关键：用printf转义参数，支持含空格/特殊字符的包名
+        "$script_path" $(printf '%q ' ${lib.escapeShellArgs config.aur.packages})
       else
-        echo "警告：$script_path 脚本未找到，跳过AUR软件安装"
+        echo "警告：$script_path 脚本未找到或不可执行，跳过AUR软件安装"
       fi
     '';
   };

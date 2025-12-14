@@ -218,11 +218,12 @@ window#waybar.right button {
 }
 
 tooltip {
-    /* all: unset; */
-    background: @main-bg;
-    color: @main-fg;
-    border-width: 1em;
-    border-color: @main-fg;
+  background: @main-bg;
+  border: 1px solid @main-fg;
+}
+
+tooltip label {
+  color: @main-fg;
 }
 
 #tray {

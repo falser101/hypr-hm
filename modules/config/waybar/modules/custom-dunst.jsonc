@@ -6,7 +6,7 @@
       "default": "",
       "notification": "<span foreground='red'><sup></sup></span>",
       "dnd": "",
-      "none": "",
+      "none": ""
     },
     "return-type": "json",
     "exec": "dunst-status",
@@ -22,7 +22,7 @@
       "show": "dunstctl history-pop",
       "toggle-dnd": "dunstctl set-paused toggle",
       "clear": "dunstctl history-clear",
-      "close-all": "dunstctl close-all",
-    },
-  },
+      "close-all": "dunstctl close-all"
+    }
+  }
 }

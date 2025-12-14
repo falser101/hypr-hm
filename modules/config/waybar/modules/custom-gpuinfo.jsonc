@@ -6,6 +6,6 @@
     "tooltip": true,
     "return-type": "json",
     "menu": "on-click-right",
-    "menu-file": "~/.config/waybar/menus/gpuinfo.xml",
-  },
+    "menu-file": "~/.config/waybar/menus/gpuinfo.xml"
+  }
 }

@@ -47,15 +47,22 @@
     "slurp"
     "grim"
     "swappy"
-
+    "blueman"
+    "ttf-nerd-fonts-symbols-mono"
+    "ttf-nerd-fonts-symbols"
+    "ttf-jetbrains-mono-nerd"
+    "network-manager-applet-git"
+    "libayatana-appindicator-glib"
     "zed"
     "zen-browser"
     "visual-studio-code-bin"
     "feishu-bin"
+    "linuxqq"
     "localsend"
 
     "linyaps"
     "vim"
+    "btop"
     # 打印机
     "cups"
     "jdk17-openjdk"

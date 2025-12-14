@@ -5,6 +5,6 @@
     "format-source": "󰍬",
     "format-source-muted": "󰍭",
     "on-click": "pavucontrol -t 4",
-    "scroll-step": 5,
-  },
+    "scroll-step": 5
+  }
 }

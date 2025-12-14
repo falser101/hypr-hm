@@ -2,8 +2,8 @@
   "custom/cpuinfo": {
     "exec": "cpu-temp",
     "interval": 5,
-    "format": "<span color='#f38ba8'></span> {0}", // 火焰图标表示CPU
+    "format": "<span color='#f38ba8'></span> {}",
     "tooltip": true,
-    "return-type": "json",
-  },
+    "return-type": "json"
+  }
 }

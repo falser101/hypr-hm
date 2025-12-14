@@ -18,9 +18,9 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Shift+T hotkey-overlay-title="Switch Theme: Theme" { spawn "switch-theme"; }
     Mod+Shift+W hotkey-overlay-title="Waybar: Waybar" { spawn-sh "pkill waybar || waybar &"; }
-    Mod+A hotkey-overlay-title="Run an Application: rofi" { spawn-sh "pkill -x rofi || rofi -show drun -config /home/falser/Projects/NiDE/.config/rofi/themes/KooL_style-5.rasi"; }
+    Mod+A hotkey-overlay-title="Run an Application: rofi" { spawn-sh "pkill -x rofi || rofi -show drun -show-icons"; }
     Mod+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
-    Mod+V hotkey-overlay-title="Open Clipboard: rofi" { spawn-sh "pkill -x rofi || cliphist list | rofi -config /home/falser/Projects/NiDE/.config/rofi/clipboard.rasi -dmenu | cliphist decode | wl-copy"; }
+    Mod+V hotkey-overlay-title="Open Clipboard: rofi" { spawn-sh "pkill -x rofi || cliphist list | rofi -config ~/.config/rofi/clipboard.rasi -dmenu | cliphist decode | wl-copy"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.

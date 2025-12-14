@@ -14,4 +14,5 @@
   xdg.configFile."qt5ct/qt5ct.conf".source = ./qt5ct/qt5ct.conf;
   xdg.configFile."niri".source = ./niri;
   xdg.configFile."hypr".source = ./hypr/Style-2;
+  xdg.configFile."rofi/clipboard.rasi".source = ./rofi/clipboard.rasi;
 }

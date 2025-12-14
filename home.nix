@@ -59,6 +59,7 @@
     "feishu-bin"
     "linuxqq"
     "localsend"
+    "thunar"
 
     "linyaps"
     "vim"
@@ -76,7 +77,10 @@
     "fcitx5-configtool"
     "fcitx5-gtk"
     "fcitx5-qt"
-
+    "qt5ct"
+    "qt6ct"
+    "kvantum"
+    "kvantum-theme-catppuccin-git"
     # waybar Electron apps tray
     "libappindicator-gtk3"
   ];

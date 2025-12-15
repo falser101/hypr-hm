@@ -1,0 +1,19 @@
+/* Catppuccin Mocha — Deep & rich */
+* {
+    main-bg:         #1e1e2eff;
+    main-fg:         #cdd6f4ff;
+
+    bar-bg:          rgba(30, 30, 46, 0.9);
+
+    select-bg:       #cba6f740; /* mauve @ 25% */
+    select-fg:       #cdd6f4ff;
+
+    active-bg:       #94e2d540; /* teal @ 25% */
+    active-fg:       #cdd6f4ff;
+
+    urgent-bg:       #f38ba840; /* red @ 25% */
+    urgent-fg:       #f38ba8ff;
+
+    border-color:    transparent;
+    separatorcolor:  rgba(255, 255, 255, 0.05);
+}

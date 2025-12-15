@@ -1,0 +1,19 @@
+/* Catppuccin Macchiato — Balanced dark */
+* {
+    main-bg:         #24273aff;
+    main-fg:         #cad3f5ff;
+
+    bar-bg:          rgba(36, 39, 58, 0.88);
+
+    select-bg:       #c6a0f640; /* lavender @ 25% */
+    select-fg:       #cad3f5ff;
+
+    active-bg:       #8bd5ca40; /* teal @ 25% */
+    active-fg:       #cad3f5ff;
+
+    urgent-bg:       #ed879640; /* red @ 25% */
+    urgent-fg:       #ed8796ff;
+
+    border-color:    transparent;
+    separatorcolor:  rgba(255, 255, 255, 0.06);
+}

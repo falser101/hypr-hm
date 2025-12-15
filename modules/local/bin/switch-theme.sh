@@ -9,6 +9,7 @@ declare -A APPS=(
   ["kitty"]="${HOME}/.config/kitty/theme.conf|kitty @ load-config"
   ["dunst"]="${HOME}/.config/dunst/dunstrc|pkill -x dunst || dunst &"
   ["waybar"]="${HOME}/.config/waybar/theme.css|pkill waybar || waybar &"
+  ["rofi"]="${HOME}/.config/rofi/theme.rasi|pkill rofi"
 )
 # 3. 默认主题（首次运行用）
 DEFAULT_THEME="frappe"
@@ -85,6 +86,7 @@ fi
 
 # 6. 替换应用配置文件（直接覆盖）
 echo "切换 $SELECTED_APP 配置到主题 $SELECTED_THEME..."
+mkdir -p "$(dirname "$APP_CONF_PATH")"
 cp -f "$THEME_APP_CONF" "$APP_CONF_PATH"
 
 # 7. 热重载应用配置（失败则忽略，不影响结果）

@@ -1,0 +1,29 @@
+/* Tokyo Night — Deep blue-purple dark theme for Rofi */
+* {
+    /* Base */
+    main-bg:         #1a1b26ff;   /* Dark navy background */
+    main-fg:         #c0caf5ff;   /* Soft light text */
+
+    /* Input bar background (slightly lighter or translucent) */
+    bar-bg:          rgba(26, 27, 38, 0.88);  /* #1a1b26 with alpha */
+
+    /* Selected / hover item */
+    select-bg:       #9aa5ce30;   /* Subtle blue-lavender @ ~19% opacity */
+    select-fg:       #c0caf5ff;   /* Keep text readable */
+
+    /* Active item (e.g., running window) */
+    active-bg:       #7dcfff40;   /* Soft cyan @ 25% opacity */
+    active-fg:       #c0caf5ff;
+
+    /* Urgent / error */
+    urgent-bg:       #f7768eff;   /* Tokyo Night red, full color for urgency */
+    urgent-fg:       #1a1b26ff;   /* Invert text for contrast */
+
+    /* Optional: selected urgent */
+    urgent-select-bg: #f7768e30;
+    urgent-select-fg: #c0caf5ff;
+
+    /* Borders & separators */
+    border-color:    transparent;
+    separatorcolor:  rgba(255, 255, 255, 0.06);
+}

@@ -15,4 +15,5 @@
   xdg.configFile."niri".source = ./niri;
   xdg.configFile."hypr".source = ./hypr/Style-2;
   xdg.configFile."rofi/clipboard.rasi".source = ./rofi/clipboard.rasi;
+  xdg.configFile."xdg-desktop-portal/niri-portals.conf".source = ./xdg-desktop-portal/niri-portals.conf;
 }

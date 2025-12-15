@@ -1,0 +1,19 @@
+/* Catppuccin Latte — Light & soft */
+* {
+    main-bg:         #eff1f5ff;
+    main-fg:         #4c4f69ff;
+
+    bar-bg:          rgba(239, 241, 245, 0.9); /* base @ 90% opacity */
+
+    select-bg:       #8839ef20; /* mauve @ 12.5% opacity (light-friendly) */
+    select-fg:       #4c4f69ff;
+
+    active-bg:       #17929920; /* teal @ 12.5% */
+    active-fg:       #4c4f69ff;
+
+    urgent-bg:       #d20f3920; /* red @ 12.5% */
+    urgent-fg:       #d20f39ff;
+
+    border-color:    transparent;
+    separatorcolor:  rgba(0, 0, 0, 0.08);
+}

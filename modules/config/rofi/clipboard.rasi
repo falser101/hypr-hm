@@ -1,130 +1,140 @@
-/**
- * ROFI Layout
- *
- * Base style for clipboard style Layout.
- *
- * User: The HyDE Project [ mini dropdown menu ]
- * Copyright: The HyDE Project
- */
+/* 引入主题颜色 */
+@import "theme.rasi"
 
-* {
-    main-bg:            #11111be6;
-    main-fg:            #cdd6f4ff;
-    main-br:            #cba6f7ff;
-    main-ex:            #f5e0dcff;
-    select-bg:          #b4befeff;
-    select-fg:          #11111bff;
-    separatorcolor:     transparent;
-    border-color:       transparent;
-}
-
-
-// Config //
+/* ============= CONFIG ============= */
 configuration {
-    modi:                        "drun";
-    show-icons:                  false;
+    modi:           "drun";
+    show-icons:     false;
+    /* 可选：禁用历史记录以更“干净” */
+    // sort:        false;
+    // disable-history: true;
 }
 
-// Main //
+/* ============= WINDOW ============= */
 window {
-    width:                       23em;
-    height:                      30em;
-    transparency:                "real";
-    fullscreen:                  false;
-    enabled:                     true;
-    cursor:                      "default";
-    spacing:                     0em;
-    padding:                     0em;
-    border-color:                @main-br;
-    background-color:            @main-bg;
+    width:            23em;
+    height:           30em;
+    transparency:     "real";
+    fullscreen:       false;
+    cursor:           "default";
+    spacing:          0;
+    padding:          0;
+    border-color:     @main-br;
+    background-color: @main-bg;
 }
+
+/* ============= MAIN CONTAINER ============= */
 mainbox {
-    enabled:                     true;
-    spacing:                     0em;
-    padding:                     0.5em;
-    orientation:                 vertical;
-    children:                    [ "wallbox" , "listbox" ];
-    background-color:            transparent;
+    spacing:          0;
+    padding:          0.5em;
+    orientation:      vertical;
+    children:         [ "wallbox", "listbox" ];
+    background-color: transparent;
 }
+
+/* ============= WALLPAPER + INPUT ============= */
 wallbox {
-    spacing:                     0em;
-    padding:                     0em;
-    expand:                      false;
-    orientation:                 horizontal;
-    background-color:            transparent;
-    /* background-image:            url("~/.cache/hyde/wall.blur", width); */
-    children:                    [ "wallframe" , "inputbar" ];
+    spacing:          0;
+    padding:          0;
+    expand:           false;
+    orientation:      horizontal;
+    background-color: transparent;
+    background-image: url("~/Pictures/wall.quad", width);
+    children:         [ "wallframe", "inputbar" ];
 }
+
 wallframe {
-    width:                       5em;
-    spacing:                     0em;
-    padding:                     0em;
-    expand:                      false;
-    background-color:            @main-bg;
-   /* background-image:            url("~/.cache/hyde/wall.quad", width);*/
+    width:            5em;
+    spacing:          0;
+    padding:          0;
+    expand:           false;
+    background-color: @main-bg;
+    background-image: url("~/Pictures/wall.blur", width);
 }
 
-
-// Inputs //
 inputbar {
-    enabled:                     true;
-    padding:                     0em;
-    children:                    [ "entry" ];
-    background-color:            @main-bg;
-    expand:                      true;
+    padding:          0;
+    children:         [ "entry" ];
+    background-color: @main-bg;
+    expand:           true;
 }
+
 entry {
-    enabled:                     true;
-    padding:                     1.8em;
-    text-color:                  @main-fg;
-    background-color:            transparent;
+    padding:          1.8em;
+    text-color:       @main-fg;
+    background-color: transparent;
+    /* 可选：隐藏光标闪烁或边框 */
+    // border:        0;
+    // cursor-blink:  false;
 }
 
-
-// Lists //
+/* ============= LIST ============= */
 listbox {
-    spacing:                     0em;
-    padding:                     0em;
-    orientation:                 vertical;
-    children:                    [ "dummy" , "listview" , "dummy" ];
-    background-color:            transparent;
+    spacing:          0;
+    padding:          0;
+    orientation:      vertical;
+    children:         [ "dummy", "listview", "dummy" ];
+    background-color: transparent;
 }
-listview {
-    enabled:                     true;
-    padding:                     0.5em;
-    columns:                     1;
-    lines:                       11;
-    cycle:                       true;
-    fixed-height:                true;
-    fixed-columns:               false;
-    expand:                      false;
-    cursor:                      "default";
-    background-color:            transparent;
-    text-color:                  @main-fg;
-}
+
 dummy {
-    spacing:                     0em;
-    padding:                     0em;
-    background-color:            transparent;
+    spacing:          0;
+    padding:          0;
+    background-color: transparent;
 }
 
+listview {
+    padding:          0.5em;
+    columns:          1;
+    lines:            11;
+    cycle:            true;
+    fixed-height:     true;
+    expand:           false;
+    cursor:           "default";
+    background-color: transparent;
+    text-color:       @main-fg;
+}
 
-// Elements //
+/* ============= ELEMENT STYLES ============= */
 element {
-    enabled:                     true;
-    padding:                     0.5em;
-    cursor:                      pointer;
-    background-color:            transparent;
-    text-color:                  @main-fg;
+    padding:          0.5em;
+    cursor:           pointer;
 }
+
+element normal {
+    background-color: transparent;
+    text-color:       @main-fg;
+}
+
 element selected.normal {
-    background-color:            @select-bg;
-    text-color:                  @select-fg;
+    background-color: @select-bg;
+    text-color:       @main-fg;
 }
+
+element urgent {
+    background-color: transparent;
+    text-color:       @urgent-fg;
+}
+
+element selected.urgent {
+    background-color: @urgent-bg;
+    text-color:       @main-fg;  /* 建议保持浅色，对比度更好 */
+}
+
+element active {
+    background-color: transparent;
+    text-color:       @active-fg;
+}
+
+element selected.active {
+    background-color: @active-bg;
+    text-color:       @main-fg;
+}
+
 element-text {
-    vertical-align:              0.0;
-    horizontal-align:            0.0;
-    cursor:                      inherit;
-    background-color:            transparent;
-    text-color:                  inherit;
+    vertical-align:   0.0;
+    horizontal-align: 0.0;
+    cursor:           inherit;
+    background-color: transparent;
+    text-color:       inherit;
 }

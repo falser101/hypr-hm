@@ -36,6 +36,7 @@
     "sddm-astronaut-theme"
     "kitty"
     "waybar"
+    "hyprlock"
     "wlogout"
     "dunst"
     "swww"

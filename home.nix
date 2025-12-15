@@ -54,7 +54,7 @@
     "network-manager-applet-git"
     "libayatana-appindicator-glib"
     "zed"
-    "zen-browser"
+    "zen-browser-bin"
     "visual-studio-code-bin"
     "feishu-bin"
     "linuxqq"

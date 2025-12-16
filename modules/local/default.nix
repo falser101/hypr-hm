@@ -14,8 +14,20 @@
     text = builtins.readFile ./bin/cpu-temp.sh;
     executable = true;
   };
+  home.file.".local/bin/debug_dunst" = {
+    text = builtins.readFile ./bin/debug_dunst.sh;
+    executable = true;
+  };
+  home.file.".local/bin/dunst-rofi-wrapper" = {
+    text = builtins.readFile ./bin/dunst-rofi-wrapper.sh;
+    executable = true;
+  };
   home.file.".local/bin/dunst-status" = {
     text = builtins.readFile ./bin/dunst-status.sh;
+    executable = true;
+  };
+  home.file.".local/bin/find_niri_window" = {
+    text = builtins.readFile ./bin/find_niri_window.sh;
     executable = true;
   };
   home.file.".local/bin/volume-ctl" = {
@@ -37,5 +49,8 @@
   };
   home.file.".local/share/wlogout" = {
     source = ./share/wlogout;
+  };
+  home.file.".local/share/rofi" = {
+    source = ./share/rofi;
   };
 }

@@ -1,59 +1,99 @@
 [global]
-    icon_theme = Papirus
-    enable_recursive_icon_lookup = true
-    # 屏幕位置
-    origin = top-center
-    # 偏移量
-    offset = 0x0
-    # 通知宽度
-    width = 400
-    max_icon_size = 64
-    # 最大通知数
-    max_icon_size = 64
-    # 分离通知
-    gap_size = 5
-    separator_height = 2
-    padding = 16
-    horizontal_padding = 16
-    frame_width = 2
+corner_radius = 10
+icon_corner_radius = 10
+icon_theme = Papirus
+follow = mouse
+enable_posix_regex = true
+width = 300
+origin = top-right
+offset = (20,20)
+scale = 0
+notification_limit = 20
+progress_bar = true
+progress_bar_height = 10
+progress_bar_frame_width = 0
+progress_bar_min_width = 125
+progress_bar_max_width = 250
+progress_bar_corner_radius =
+indicate_hidden = yes
+transparency = 10
+separator_height = 2
+padding = 8
+horizontal_padding = 8
+text_icon_padding = 10
+frame_width = 5
+gap_size = 5
+separator_color = auto
+sort = yes
+line_height = 3
+markup = full
+format = "%s\n%b"
+alignment = left
+vertical_alignment = center
+show_age_threshold = 60
+ellipsize = middle
+ignore_newline = no
+stack_duplicates = true
+hide_duplicate_count = false
+show_indicators = yes
+enable_recursive_icon_lookup = true
+icon_position = left
+min_icon_size = 64
+max_icon_size = 128
+sticky_history = yes
+history_length = 20
+title = Dunst
+class = Dunst
+ignore_dbusclose = false
+force_xwayland = false
+force_xinerama = false
+mouse_left_click = context, close_current
+mouse_middle_click = do_action, close_current
+mouse_right_click = close_all
+dmenu = /usr/bin/rofi -config ~/.config/rofi/notify.rasi -dmenu -p dunst:
+browser = /usr/bin/xdg-open
+always_run_script = true
 
-    # === 颜色（Catppuccin Frappé）===
-    # 背景与文字
-    background = "#303446"          # base
-    foreground = "#c6d0f5"          # text
+# === Color（Catppuccin Frappé）===
+background = "#303446"
+foreground = "#c6d0f5"
+frame_color = "#babbf1"
+highlight = "#ca9ee6"
+font = JetBrainsMono Nerd Font 10
 
-    # 边框（frame）
-    frame_color = "#babbf1"         # lavender (active border in kitty)
+[experimental]
+per_monitor_dpi = true
 
-    # 分隔线颜色（使用边框色）
-    separator_color = frame
+[feishu-rule]
+appname = Feishu
+urgency = normal
+timeout = 10
+script = debug_dunst
 
-    # 高亮（如鼠标悬停）
-    highlight = "#ca9ee6"           # mauve
+[slack]
+desktop_entry = "^Slack$"
+new_icon = slack
 
-    # 字体（推荐 Nerd Font 或等宽）
-    font = JetBrainsMono Nerd Font 10
+[telegram]
+desktop_entry = "^Telegram Desktop$"
+new_icon = telegram-desktop
 
-    # 其他
-    dmenu = /usr/bin/rofi -dmenu -p "Dunst"
-    browser = /usr/bin/xdg-open
-    always_run_script = true
-    mouse_left_click=do_action, remove_current, open_url
-    mouse_middle_click=close_current
-    mouse_right_click=close_all
+[skype]
+desktop_entry = "^Skype$"
+new_icon = skype
 
 [urgency_low]
-    background = "#303446"
-    foreground = "#8caaee"          # blue (low urgency)
-    timeout = 5
+background = "#303446"
+foreground = "#8caaee"
+timeout = 5
 
 [urgency_normal]
-    background = "#303446"
-    foreground = "#c6d0f5"          # text
-    timeout = 10
+background = "#303446"
+foreground = "#c6d0f5"
+timeout = 10
 
 [urgency_critical]
-    background = "#303446"
-    foreground = "#e78284"          # red (critical)
-    frame_color = "#e78284"
-    timeout = 10                     # 永不自动消失
+background = "#303446"
+foreground = "#e78284"
+frame_color = "#e78284"
+timeout = 10

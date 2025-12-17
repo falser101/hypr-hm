@@ -1,0 +1,89 @@
+@import "theme.rasi"
+
+configuration {
+    modi: "drun";
+    show-icons: false;
+    location: 2;          /* top center */
+    anchor: 2;
+    x-offset: 0;
+    y-offset: -50;
+    width: 300;
+    lines: 8;
+    columns: 1;
+    line-padding: 8;
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+window {
+    background-color: @bar-bg;
+    border: 2px;
+    border-color: @border-color;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 0px;
+    width: 300px;
+    transparency: "real";
+}
+
+inputbar {
+    children: [ "prompt", "entry" ];
+    background-color: @main-bg;
+    border-radius: 8px;
+    padding: 8px;
+    spacing: 10px;
+}
+
+prompt {
+    text-color: @active-fg;
+    font: "JetBrainsMono Nerd Font Bold 11";
+    margin: 0px 6px;
+    vertical-align: 0.5;
+}
+
+entry {
+    text-color: @main-fg;
+    caret-color: @main-fg;
+    background-color: transparent;
+    margin: 0px 6px;
+    vertical-align: 0.5;
+}
+
+listview {
+    columns: 1;
+    lines: 8;
+    dynamic: true;
+    scrollbar: false;
+    background-color: transparent;
+    padding: 6px 0px;
+    spacing: 4px;
+}
+
+element {
+    background-color: transparent;
+    text-color: @main-fg;
+    padding: 6px 12px;
+    border-radius: 6px;
+    spacing: 0;
+    margin: 0;
+}
+
+element selected {
+    background-color: @select-bg;
+    text-color: @select-fg;
+}
+
+element selected normal {
+    background-color: @select-bg;
+    text-color: @select-fg;
+}
+
+element alternate {
+    background-color: transparent;
+    text-color: @main-fg;
+}
+
+scrollbar {
+    width: 0;
+    background-color: transparent;
+    handle-color: transparent;
+}

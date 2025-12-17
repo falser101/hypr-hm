@@ -10,131 +10,104 @@ configuration {
     // disable-history: true;
 }
 
-/* ============= WINDOW ============= */
 window {
-    width:            23em;
-    height:           30em;
-    transparency:     "real";
-    fullscreen:       false;
-    cursor:           "default";
-    spacing:          0;
-    padding:          0;
-    border-color:     @main-br;
     background-color: @main-bg;
-}
-
-/* ============= MAIN CONTAINER ============= */
-mainbox {
-    spacing:          0;
-    padding:          0.5em;
-    orientation:      vertical;
-    children:         [ "wallbox", "listbox" ];
-    background-color: transparent;
-}
-
-/* ============= WALLPAPER + INPUT ============= */
-wallbox {
-    spacing:          0;
-    padding:          0;
-    expand:           false;
-    orientation:      horizontal;
-    background-color: transparent;
-    background-image: url("~/Pictures/wall.quad", width);
-    children:         [ "wallframe", "inputbar" ];
-}
-
-wallframe {
-    width:            5em;
-    spacing:          0;
-    padding:          0;
-    expand:           false;
-    background-color: @main-bg;
-    background-image: url("~/Pictures/wall.blur", width);
+    width: inherit;
+    height: inherit;
+    border-radius: 8px 8px 0 0;
 }
 
 inputbar {
-    padding:          0;
-    children:         [ "entry" ];
-    background-color: @main-bg;
-    expand:           true;
+    background-color: @bar-bg;
+    color: @main-fg;
+    padding: 8px;
+    border-radius: 8px 8px 0 0;
+    children: [prompt, entry];
+}
+
+prompt {
+    background-color: transparent;
+    color: @main-fg;
+    margin-right: 8px;
+    font-weight: bold;
 }
 
 entry {
-    padding:          1.8em;
-    text-color:       @main-fg;
     background-color: transparent;
-    /* 可选：隐藏光标闪烁或边框 */
-    // border:        0;
-    // cursor-blink:  false;
-}
-
-/* ============= LIST ============= */
-listbox {
-    spacing:          0;
-    padding:          0;
-    orientation:      vertical;
-    children:         [ "dummy", "listview", "dummy" ];
-    background-color: transparent;
-}
-
-dummy {
-    spacing:          0;
-    padding:          0;
-    background-color: transparent;
+    width: inherit;
+    placeholder: " 📋 Search  Clipboard ";
 }
 
 listview {
-    padding:          0.5em;
-    columns:          1;
-    lines:            11;
-    cycle:            true;
-    fixed-height:     true;
-    expand:           false;
-    cursor:           "default";
-    background-color: transparent;
-    text-color:       @main-fg;
+    padding: 4px 0;
+    spacing: 2px;
+    margin: 0;
+    border-radius: 0 0 8px 8px;
 }
 
-/* ============= ELEMENT STYLES ============= */
 element {
-    padding:          0.5em;
-    cursor:           pointer;
+    orientation: horizontal;
+    color: @main-fg;
+    border-radius: 6px;
 }
 
-element normal {
-    background-color: transparent;
-    text-color:       @main-fg;
+element normal.normal {
+    background-color:           inherit;
+    text-color:                 inherit;
 }
 
+element normal.urgent {
+    background-color:           inherit;
+    text-color:                 inherit;
+}
+
+element normal.active {
+    background-color:           inherit;
+    text-color:                 inherit;
+}
+
+element-text selected,
 element selected.normal {
-    background-color: @select-bg;
-    text-color:       @main-fg;
-}
-
-element urgent {
-    background-color: transparent;
-    text-color:       @urgent-fg;
+    background-color:           @active-bg;
+    text-color:                 inherit;
 }
 
 element selected.urgent {
-    background-color: @urgent-bg;
-    text-color:       @main-fg;  /* 建议保持浅色，对比度更好 */
-}
-
-element active {
-    background-color: transparent;
-    text-color:       @active-fg;
+    background-color:           inherit;
+    text-color:                 inherit;
 }
 
 element selected.active {
-    background-color: @active-bg;
-    text-color:       @main-fg;
+    background-color:           inherit;
+    text-color:                 inherit;
+}
+
+element alternate.normal {
+    background-color:           inherit;
+    text-color:                 inherit;
+}
+
+element alternate.urgent {
+    background-color:           inherit;
+    text-color:                 @main-fg;
+}
+
+element alternate.active {
+    background-color:           inherit;
+    text-color:                 inherit;
+}
+
+element-icon {
+    background-color:           transparent;
+    text-color:                 inherit;
+    size:                       32px;
+    cursor:                     inherit;
 }
 
 element-text {
-    vertical-align:   0.0;
-    horizontal-align: 0.0;
-    cursor:           inherit;
-    background-color: transparent;
-    text-color:       inherit;
+    background-color:           transparent;
+    text-color:                 @main-fg;
+    cursor:                     inherit;
+    vertical-align:             0.5;
+    horizontal-align:           0;
 }

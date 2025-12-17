@@ -3,7 +3,7 @@
     "format": "{0} ",
     "rotate": 0,
     "tooltip-format": "\udb80\udd47 Clipboard history",
-    "on-click": "pkill -x rofi || cliphist list | rofi -config /home/falser/Projects/NiDE/.config/rofi/clipboard.rasi -dmenu | cliphist decode | wl-copy",
+    "on-click": "pkill -x rofi || cliphist list | rofi -config ~/.config/rofi/clipboard.rasi -dmenu | cliphist decode | wl-copy",
     "menu": "on-click-right",
     "menu-file": "~/.config/waybar/menus/clipboard.xml",
     "menu-actions": {

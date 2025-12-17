@@ -57,7 +57,6 @@
     "zed"
     "zen-browser-bin"
     "visual-studio-code-bin"
-    "feishu-bin"
     "linuxqq"
     "localsend"
     "thunar"

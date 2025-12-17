@@ -16,5 +16,7 @@
   xdg.configFile."hypr".source = ./hypr/Style-2;
   xdg.configFile."rofi/clipboard.rasi".source = ./rofi/clipboard.rasi;
   xdg.configFile."rofi/notify.rasi".source = ./rofi/notify.rasi;
+  xdg.configFile."rofi/style2.rasi".source = ./rofi/style2.rasi;
+  xdg.configFile."rofi/selector.rasi".source = ./rofi/selector.rasi;
   xdg.configFile."xdg-desktop-portal/niri-portals.conf".source = ./xdg-desktop-portal/niri-portals.conf;
 }

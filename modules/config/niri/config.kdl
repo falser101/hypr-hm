@@ -9,3 +9,7 @@ include "animations.kdl"
 include "window-rules.kdl"
 include "hotkeys.kdl"
 include "layer-rule.kdl"
+cursor {
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 24
+}

@@ -18,10 +18,6 @@
     text = builtins.readFile ./bin/debug_dunst.sh;
     executable = true;
   };
-  home.file.".local/bin/dunst-rofi-wrapper" = {
-    text = builtins.readFile ./bin/dunst-rofi-wrapper.sh;
-    executable = true;
-  };
   home.file.".local/bin/dunst-status" = {
     text = builtins.readFile ./bin/dunst-status.sh;
     executable = true;

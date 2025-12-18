@@ -1,7 +1,7 @@
 environment {
   XDG_CURRENT_DESKTOP "niri"
   QT_QPA_PLATFORM "wayland;xcb"
-  DISPLAY ":1"
+  DISPLAY ":0"
   ELECTRON_OZONE_PLATFORM_HINT "auto"
   QT_QPA_PLATFORMTHEME "qt5ct"
   QT_QPA_PLATFORMTHEME_QT6 "qt6ct"

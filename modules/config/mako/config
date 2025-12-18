@@ -1,0 +1,54 @@
+# ~/.config/mako/config
+
+include=~/.config/mako/theme.conf
+
+max-history=5
+sort=+time
+
+on-button-left=exec makoctl menu -- rofi -dmenu -p "Mako" -config ~/.config/rofi/notify.rasi
+on-button-middle=dismiss-group
+on-button-right=dismiss
+on-touch=invoke-default-action
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
+
+font=monospace 11
+border-size=1
+border-radius=8
+padding=10
+margin=5
+outer-margin=1
+width=400
+height=200
+
+icons=1
+max-icon-size=34
+icon-location=left
+text-alignment=center
+
+default-timeout=10000
+ignore-timeout=0
+max-visible=5
+history=1
+actions=1
+format=<b>%a</b> • <b>%s</b>\n%b\n
+
+layer=top
+anchor=top-right
+
+[mode=do-not-disturb]
+invisible=1
+
+[app-name=wp-vol]
+layer=overlay
+history=0
+anchor=top-center
+group-by=app-name
+format=<b>%s</b>\n%b
+
+[app-name=volume group-index=0]
+invisible=0
+
+[app-name="Feishu"]
+on-button-left=exec focus-feishu
+# 可选：隐藏 Feishu 的操作菜单（因为只有一个 default 操作，没必要显示）
+actions=false

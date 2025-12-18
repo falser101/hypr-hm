@@ -5,7 +5,7 @@ set -e
 THEME_ROOT="$HOME/.local/share/nide/themes/"
 declare -A APPS=(
   ["kitty"]="${HOME}/.config/kitty/theme.conf|kitty @ load-config"
-  ["dunst"]="${HOME}/.config/dunst/dunstrc|dunstctl reload"
+  ["mako"]="${HOME}/.config/mako/theme.conf|makoctl reload"
   ["waybar"]="${HOME}/.config/waybar/theme.css|pkill waybar && waybar &"
   ["rofi"]="${HOME}/.config/rofi/theme.rasi|pkill rofi"
 )

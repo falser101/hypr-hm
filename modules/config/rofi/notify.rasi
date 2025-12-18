@@ -1,95 +1,83 @@
-// Config //
-configuration {
-    modi:                        "drun";
-    show-icons:                  true;
-    drun-display-format:         "{name}";
-    font:                        "JetBrainsMono Nerd Font 9";
+/* rofi-mako-dmenu.rasi */
+
+@import "theme.rasi"  // 假设你的 theme.rasi 保存在同一目录
+
+* {
+    font: "JetBrains Mono 12";
+    background-color: @bar-bg;
+    foreground: @main-fg;
+
+    /* 禁用边框和阴影，保持简约 */
+    border: 0;
+    border-radius: 8px;
+    padding: 12px;
+
+    /* 元素间距 */
+    element-spacing: 6px;
+    element-padding: 8px 12px;
+
+    /* 分隔线 */
+    separator-color: @separatorcolor;
 }
 
-@import "theme.rasi"
-
-
-// Main //
 window {
-    enabled:                     true;
-    fullscreen:                  false;
-    width:                       40em;
-    height:                      32.8em;
-    transparency:                "real";
-    cursor:                      "default";
-    spacing:                     0em;
-    padding:                     0em;
-    border:                      0em;
-    border-radius:               0em;
-    border-color:                transparent;
-    background-color:            transparent;
-    background-image: url         ("~/.local/share/rofi/assets/notification.png",width);
-
+    background-color: @bar-bg;
+    border: none;
+    padding: 10px;
+    margin: 0;
+    width: 360px;
 }
+
 mainbox {
-    enabled:                     true;
-    orientation:                 vertical;
-    children:                    [ "dummy" , "frame" ];
-    background-color:            transparent;
-}
-dummy {
-    padding:                     6em;
-    expand:                      false;
-    background-color:            transparent;
-}
-frame {
-    enabled:                     true;
-    orientation:                 vertical;
-    children:                    [ "dummy2" , "listview" , "dummy2" ];
-    background-color:            transparent;
+    padding: 0;
 }
 
-// Lists //
+inputbar {
+    children: [ textbox, prompt ];
+    background-color: @main-bg;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+textbox {
+    /* 显示 "notification" 提示文字 */
+    placeholder: "notification";
+    placeholder-color: @main-fg;
+    background-color: transparent;
+    text-color: @main-fg;
+    cursor: default;
+    expand: true;
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @main-fg;
+    margin: 0 8px 0 0;
+}
+
 listview {
-    enabled:                     true;
-    spacing:                     0em;
-    padding:                     0em;
-    columns:                     1;
-    lines:                       5;
-    cycle:                       true;
-    dynamic:                     true;
-    scrollbar:                   false;
-    layout:                      vertical;
-    reverse:                     false;
-    expand:                      false;
-    fixed-height:                true;
-    fixed-columns:               true;
-    cursor:                      "default";
-    background-color:            transparent;
-}
-dummy2 {
-    spacing:                     0em;
-    padding:                     0em;
-    background-color:            transparent;
+    background-color: transparent;
+    fixed-height: false;
+    lines: 6;
+    scrollbar: false;
 }
 
-
-// Elements //
 element {
-    enabled:                     true;
-    spacing:                     1em;
-    padding:                     1em;
-    cursor:                      pointer;
-    background-color:            transparent;
-    text-color:                  @main-fg;
-    border-radius:               0em;
+    background-color: transparent;
+    text-color: @main-fg;
 }
-element selected.normal {
-    background-color:            @select-bg;
-    text-color:                  @select-fg;
+
+element selected {
+    background-color: @select-bg;
+    text-color: @select-fg;
 }
-element-icon {
-    enabled:                     false;
+
+element active {
+    background-color: @active-bg;
+    text-color: @active-fg;
 }
-element-text {
-    vertical-align:              0.5;
-    horizontal-align:            0.5;
-    cursor:                      inherit;
-    background-color:            transparent;
-    text-color:                  inherit;
+
+element urgent {
+    background-color: @urgent-bg;
+    text-color: @urgent-fg;
 }

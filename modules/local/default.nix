@@ -14,12 +14,8 @@
     text = builtins.readFile ./bin/cpu-temp.sh;
     executable = true;
   };
-  home.file.".local/bin/debug_dunst" = {
-    text = builtins.readFile ./bin/debug_dunst.sh;
-    executable = true;
-  };
-  home.file.".local/bin/dunst-status" = {
-    text = builtins.readFile ./bin/dunst-status.sh;
+  home.file.".local/bin/focus-feishu" = {
+    text = builtins.readFile ./bin/focus-feishu.sh;
     executable = true;
   };
   home.file.".local/bin/find_niri_window" = {

@@ -17,7 +17,8 @@
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
-
+    nil
+    nixd
   ];
 
   home.pointerCursor = {
@@ -35,6 +36,7 @@
   aur.packages = [
     "sddm-astronaut-theme"
     "kitty"
+    "niri"
     "waybar"
     "hyprlock"
     "wlogout"
@@ -53,7 +55,7 @@
     "ttf-nerd-fonts-symbols-mono"
     "ttf-nerd-fonts-symbols"
     "ttf-jetbrains-mono-nerd"
-    "network-manager-applet-git"
+    "network-manager-applet"
     "libayatana-appindicator-glib"
     "zed"
     "zen-browser-bin"

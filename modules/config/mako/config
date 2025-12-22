@@ -48,7 +48,16 @@ format=<b>%s</b>\n%b
 [app-name=volume group-index=0]
 invisible=0
 
+[app-name=osd]
+layer=overlay
+history=0
+anchor=top-center
+group-by=app-name
+format=<b>%s</b>\n%b
+
+[app-name=osd group-index=1]
+invisible=0
+
 [app-name="Feishu"]
 on-button-left=exec focus-feishu
-# 可选：隐藏 Feishu 的操作菜单（因为只有一个 default 操作，没必要显示）
 actions=false

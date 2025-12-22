@@ -1,17 +1,17 @@
 {
   "custom/monitor-brightness": {
-    "format": "💡 {percentage}%", // 显示亮度百分比+图标
+    "format": "{icon} {percentage}%", // 显示亮度百分比+图标
     "format-icons": ["󰃞", "󰃟", "󰃝"], // 可选：亮度等级图标
-    "interval": 2, // 2秒刷新一次亮度显示
+    "rotate": 0,
+    "interval": 2,
     "exec": "brightness get", // 获取当前亮度
     "exec-if": "command -v ddcutil", // 仅当 ddcutil 存在时加载
     // 鼠标交互：左键点击唤出滑块，滚轮调整亮度
-    "on-click": "~/.config/waybar/scripts/brightness_slider.sh",
-    "on-scroll-up": "~/.config/waybar/scripts/monitor_brightness.sh inc 5", // 滚轮上+5%
-    "on-scroll-down": "~/.config/waybar/scripts/monitor_brightness.sh dec 5", // 滚轮下-5%
+    "on-scroll-up": "brightness inc 5", // 滚轮上+5%
+    "on-scroll-down": "brightness dec 5", // 滚轮下-5%
     "return-type": "json",
     "tooltip": true,
-    "tooltip-format": "显示器亮度：{percentage}%\n左键：滑块调整\n滚轮：±5%",
+    "tooltip-format": "显示器亮度：{percentage}%\n滚轮：±5%",
     "style": "padding: 0 8px;",
   },
 }

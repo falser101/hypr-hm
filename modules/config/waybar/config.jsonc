@@ -21,7 +21,13 @@
   },
   "modules-right": ["group/pill#right1", "group/pill#right2"],
   "group/pill#right1": {
-    "modules": ["network", "bluetooth", "pulseaudio", "pulseaudio#microphone"],
+    "modules": [
+      "network",
+      "bluetooth",
+      "pulseaudio",
+      "pulseaudio#microphone",
+      "custom/monitor-brightness",
+    ],
     "orientation": "inherit",
   },
   "group/pill#right2": {
@@ -55,5 +61,6 @@
     "modules/custom-dunst.jsonc",
     "modules/custom-cpuinfo.jsonc",
     "modules/custom-gpuinfo.jsonc",
+    "modules/custom-brightness.jsonc",
   ],
 }

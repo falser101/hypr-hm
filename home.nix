@@ -19,6 +19,19 @@
   home.packages = with pkgs; [
     nil
     nixd
+    sddm-astronaut
+    waybar
+    wlogout
+    mako
+    mpv
+    swww
+    rofi
+    wl-clipboard
+    cliphist
+    unzip
+    slurp
+    grim
+    swappy
   ];
 
   home.pointerCursor = {
@@ -34,24 +47,10 @@
   };
 
   aur.packages = [
-    "sddm-astronaut-theme"
     "kitty"
     "niri"
-    "waybar"
     "hyprlock"
-    "wlogout"
-    "mako"
-    "mpv"
-    "swww"
-    "rofi"
     "otf-font-awesome"
-    "wl-clipboard"
-    "cliphist"
-    "unzip"
-    "slurp"
-    "grim"
-    "swappy"
-    "blueman"
     "ttf-nerd-fonts-symbols-mono"
     "ttf-nerd-fonts-symbols"
     "ttf-jetbrains-mono-nerd"

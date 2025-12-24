@@ -27,8 +27,8 @@ configuration {
 
 // Main //
 window {
-    height:                      35em;
-    width:                       56em;
+    height:                      30em;
+    width:                       50em;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
@@ -51,7 +51,7 @@ mainbox {
 inputbar {
     enabled:                     true;
     spacing:                     0em;
-    padding:                     5em;
+    padding:                     2em;
     children:                    [ "entry" ];
     background-color:            transparent;
 }

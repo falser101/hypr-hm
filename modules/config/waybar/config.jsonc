@@ -1,7 +1,7 @@
 {
   // "layer": "top", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
-  "height": 38, // Waybar height (to be removed for auto height)
+  "height": 42, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
@@ -31,19 +31,18 @@
     "orientation": "inherit",
   },
   "group/pill#right2": {
-    "modules": [
-      "custom/cliphist",
-      "custom/dunst",
-      "tray",
-      "clock",
-      "custom/power",
-    ],
+    "modules": ["custom/cliphist", "tray", "clock", "custom/power"],
     "orientation": "inherit",
   },
   "custom/power": {
     "format": "⏻ ",
     "tooltip": false,
     "on-click": "wlogout",
+  },
+  "wlr/taskbar": {
+    "app_ids-mapping": {
+      "": "Feishu",
+    },
   },
   "include": [
     "modules/bluetooth.jsonc",
@@ -58,7 +57,6 @@
     "modules/tray.jsonc",
     "modules/wlr-taskbar.jsonc",
     "modules/custom-cliphist.jsonc",
-    "modules/custom-dunst.jsonc",
     "modules/custom-cpuinfo.jsonc",
     "modules/custom-gpuinfo.jsonc",
     "modules/custom-brightness.jsonc",

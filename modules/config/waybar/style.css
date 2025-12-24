@@ -218,12 +218,12 @@ window#waybar.right button {
 }
 
 tooltip {
-  background: @main-bg;
-  border: 1px solid @main-fg;
+    background: @main-bg;
+    border: 1px solid @main-fg;
 }
 
 tooltip label {
-  color: @main-fg;
+    color: @main-fg;
 }
 
 #tray {
@@ -258,4 +258,12 @@ tooltip label {
 
 #language {
     min-width: 1.11em;
+}
+
+.niri-taskbar button:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.niri-taskbar button.focused {
+    background: rgba(0, 0, 0, 0.3);
 }

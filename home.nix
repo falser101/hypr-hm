@@ -32,6 +32,7 @@
     slurp
     grim
     swappy
+    xdg-desktop-portal-hyprland
   ];
 
   home.pointerCursor = {

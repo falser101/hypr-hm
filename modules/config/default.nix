@@ -7,14 +7,15 @@
     ./hypr
     ./kitty
     ./Kvantum
+    ./mako
+    ./niri
     ./qt5ct
     ./qt6ct
+    ./rofi
+    ./swappy
     ./waybar
     ./wlogout
-    ./swappy
-    ./niri
-    ./rofi
-    ./mako
+    ./xdg-desktop-portal
   ];
   xdg.configFile."feishu-flags.conf".source = ./feishu-flags.conf;
 }

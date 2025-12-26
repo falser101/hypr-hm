@@ -32,6 +32,9 @@
     slurp
     grim
     swappy
+    btop
+    kdePackages.dolphin
+    kdePackages.konsole
     xdg-desktop-portal-hyprland
   ];
 
@@ -62,11 +65,8 @@
     "visual-studio-code-bin"
     "linuxqq"
     "localsend"
-    "thunar"
-
     "linyaps"
     "vim"
-    "btop"
     # 打印机
     "cups"
     "jdk17-openjdk"

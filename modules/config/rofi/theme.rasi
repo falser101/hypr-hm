@@ -1,0 +1,19 @@
+/* Catppuccin Frappé — Soothing pastel theme */
+* {
+    main-bg:         #303446ff;
+    main-fg:         #c6d0f5ff;
+
+    bar-bg:          rgba(48, 52, 70, 0.85); /* #303446 + transparency */
+
+    select-bg:       #ca9ee640; /* mauve @ 25% opacity */
+    select-fg:       #c6d0f5ff;
+
+    active-bg:       #81c8be40; /* teal @ 25% */
+    active-fg:       #c6d0f5ff;
+
+    urgent-bg:       #e7828440; /* red @ 25% */
+    urgent-fg:       #e78284ff;
+
+    border-color:    transparent;
+    separatorcolor:  rgba(255, 255, 255, 0.05);
+}

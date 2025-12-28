@@ -10,3 +10,8 @@ layer-rule {
         off
     }
 }
+
+layer-rule {
+    match namespace="^swww-daemon$"
+    place-within-backdrop true
+}

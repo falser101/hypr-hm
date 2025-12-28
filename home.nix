@@ -51,6 +51,8 @@
   };
 
   aur.packages = [
+    "greetd"
+    "cosmic-greeter"
     "kitty"
     "niri"
     "hyprlock"
@@ -83,7 +85,6 @@
     "qt5ct"
     "qt6ct"
     "kvantum"
-    "kvantum-theme-catppuccin-git"
     # waybar Electron apps tray
     "libappindicator-gtk3"
   ];
